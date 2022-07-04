@@ -1,0 +1,328 @@
+.contacts {
+  padding-bottom: 70px;
+
+  &__container {
+    @include r(320) {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+  @include r(1024) {
+    padding: 11px 0 70px;
+  }
+  @include r(440) {
+    padding: 11px 0 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    @include r(440) {
+      padding-left: 20px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__form {
+    max-width: 410px;
+    width: 100%;
+
+    @include r(1024) {
+      max-width: 342px;
+    }
+    @include r(960) {
+      max-width: 466px;
+    }
+  }
+
+  &__form-title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-family: "TTFirsNeue", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    color: $mineShaft;
+    @include r(570) {
+      font-size: 18px;
+    }
+  }
+
+  &__form-descr {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dustygray;
+    @include r(440) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
+.application-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 410px;
+  width: 100%;
+  @include r(960) {
+    max-width: 466px;
+  }
+
+  &__label {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  &__input {
+    padding: 15px 23px;
+    width: 100%;
+    background-color: #e9e9e9;
+    border: none;
+    color: $mineShaft;
+    outline: 0;
+    border: 1px solid transparent;
+    @include r(1024) {
+      padding: 17px 23px;
+    }
+    @include r(440) {
+      padding: 12px 23px;
+    }
+    &:focus {
+      border: 1px solid #ff6e30;
+    }
+
+    &::placeholder {
+      font-family: "roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $dustygray;
+      transition: color 0.3s;
+      @include r(440) {
+        font-size: 14px;
+      }
+    }
+
+    &:hover::placeholder {
+      color: #ff6e30;
+    }
+  }
+
+  &__textarea {
+    padding: 15px 23px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-height: 150px;
+    background-color: #e9e9e9;
+    border: none;
+    outline: 0;
+    resize: none;
+    border: 1px solid transparent;
+    @include r(440) {
+      margin-bottom: 23px;
+    }
+    &:focus {
+      border: 1px solid #ff6e30;
+    }
+
+    &::placeholder {
+      font-family: "roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $dustygray;
+      transition: color 0.3s;
+      @include r(440) {
+        font-size: 14px;
+      }
+    }
+
+    &:hover::placeholder {
+      color: #ff6e30;
+    }
+  }
+
+  &__btn {
+    max-width: 126px;
+    @include r(440) {
+      padding: 10px 22px;
+      max-width: 115px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+#contacts-map {
+  max-width: 850px;
+  width: 100%;
+  height: 460px;
+  @include r(1340) {
+    max-width: 590px;
+  }
+  @include r(1024) {
+    padding-top: 6px;
+  }
+  @include r(768) {
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+  @include r(440) {
+    margin-bottom: 41px;
+    width: 100%;
+  }
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.js-validate-error-label {
+  position: absolute;
+  
+  font-size: 12px;
+}
+
+.map {
+  position: relative;
+
+  &__info {
+    padding: 180px 50px 150px 60px;
+    position: absolute;
+    max-width: 410px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 32, 32, 0.85);
+    color: $white;
+    z-index: 100;
+    transition: transform 0.6s, opacity 0.6s, visibility 0.6s;
+    @include r(1340) {
+      padding: 25px 251px 21px 30px;
+      max-width: 100%;
+      bottom: 0;
+      height: 157px;
+    }
+    @include r(1024) {
+      bottom: -8px;
+    }
+    @include r(670) {
+      padding: 25px 20px 14px 18px;
+    }
+    @include r(440) {
+      bottom: -18px;
+    }
+  }
+
+  &__info--no-active {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: "TTFirsNeue", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    @include r(670) {
+      font-size: 18px;
+    }
+    @include r(440) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__address {
+    margin-bottom: 5px;
+    max-width: 300px;
+    font-style: normal;
+    line-height: 28px;
+    color: $silver;
+    @include r(1340) {
+      display: inline;
+      max-width: 293px;
+    }
+    @include r(960) {
+      display: block;
+      max-width: 436px;
+    }
+    @include r(670) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @include r(440) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    padding-left: 20px;
+    font-family: "TTFirsNeue", sans-serif;
+    @include r(1340) {
+      color: $orange;
+      display: inline;
+    }
+    @include r(960) {
+      color: $orange;
+      display: block;
+    }
+    @include r(670) {
+      font-size: 18px;
+    }
+    @include r(440) {
+      font-size: 14px;
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      display: block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../images/icons/phone.svg");
+      @include r(1340) {
+        filter: invert(44%) sepia(41%) saturate(3717%) hue-rotate(339deg) brightness(101%) contrast(101%);
+      }
+    }
+  }
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: $dovegray;
+    border-radius: 99px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../images/icons/close.svg");
+  }
+}
+
+ymaps.ymaps-2-1-79-controls__control_toolbar {
+  display: none;
+}
+
+ymaps.ymaps-2-1-79-map-copyrights-promo {
+  display: none;
+}
+
+ymaps.ymaps-2-1-79-copyright.ymaps-2-1-79-copyright_logo_no {
+  display: none;
+}

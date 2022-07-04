@@ -1,0 +1,119 @@
+.footer {
+  padding: 27px 0 14px;
+  color: $white;
+  background-color: $mineShaft;
+  @include r (768){
+    padding: 24px 0 18px;
+  }
+  @include r (440){
+    padding: 33px 0 18px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+
+    @include r(1024){
+      grid-template-columns: repeat(8, auto);
+    }
+    @include r(560){
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 6px;
+    grid-column: 1/3;
+    justify-self: start;
+    @include r (560){
+      margin: 0 auto;
+    }
+
+  }
+
+  &__info {
+    max-width: 360px;
+    grid-column: 5/9;
+    @include r(1024){
+      grid-column: 4/7;
+    }
+    @include r(768){
+      display: none;
+    }
+
+    & p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 22px;
+      color: $silver;
+      & span {
+        display: inline-block;
+        color: $dovegray;
+      }
+    }
+  }
+  &__social-inner {
+    grid-column: 11/13;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include r (1024){
+      grid-column: 7/9;
+    }
+    @include r (440){
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social {
+    padding-right: 14px;
+    @include r (1024){
+      grid-column: 7/9;
+      display: flex;
+    }
+    @include r (768){
+      padding-right: 8px;
+    }
+    @include r (440){
+      padding-right: 16px;
+    }
+  }
+
+  &__social-text {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.logo-box {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include r (560) {
+    order: 2;
+  }
+
+  & span {
+    display: flex;
+    align-items: center;
+    font-family: "TTFirsNeue", sans-serif;
+    color: $silver;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    @include r (440) {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+}

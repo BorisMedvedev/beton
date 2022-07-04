@@ -1,0 +1,314 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  min-height: 320px;
+  color: $mineShaft;
+  background-color: $white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1320px;
+  width: 100%;
+
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.site {
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "TTFirsNeue", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+
+}
+
+.link-kit {
+  position: relative;
+  transition: color 0.2s;
+  transition: color 0.2s, filter 0.2s;
+  outline: none;
+  z-index: 99;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -3px;
+    left: -6px;
+    right: -6px;
+    bottom: -3px;
+    background-color: #bc572b;
+    color: $white;
+    z-index: -1;
+    transition: color 0.2s, filter 0.2s;
+    opacity: 0;
+  }
+
+  &:focus {
+    color: $white;
+  }
+
+  &:focus::after {
+    opacity: 1;
+  }
+
+  &:hover {
+    color: #ff6e30;
+  }
+
+  &:active {
+    outline: 0;
+    color: #ce4307;
+  }
+
+  &:active::after {
+    background-color: transparent;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  padding: 6px 14px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  background-color: $mineShaft;
+
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 22px;
+  font-family: "roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  background-color: $orange;
+  border: 3px solid transparent;
+  transition: background-color 0.3s;
+
+  &:focus {
+    background-color: #ff6e30;
+    border: 3px solid #ce4307;
+  }
+  &:hover {
+    background-color: #bc572b;
+  }
+
+  &:active {
+    border: 3px solid transparent;
+    background-color: #ce4307;
+  }
+}
+
+.btn-transparent {
+  &:focus {
+    background-color: #bc572b;
+    border: 3px solid #ff6e30;
+  }
+  &:hover {
+    background-color: #ff6e30;
+  }
+
+  &:active {
+    border: 3px solid transparent;
+    background-color: #ce4307;
+  }
+}
+
+input[type="text"], input[type="password"], input[type="date"],
+input[type="datetime"], input[type="number"], input[type="search"],
+input[type="tel"], input[type="time"], input[type="url"],
+input[type="month"], input[type="week"], input[type="email"] {
+  position: relative;
+  display: block;
+
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder,
+input[type="datetime"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder,
+input[type="month"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
+
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="date"]:-moz-placeholder,
+input[type="datetime"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="search"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="url"]:-moz-placeholder,
+input[type="month"]:-moz-placeholder, input[type="week"]:-moz-placeholder, input[type="email"]:-moz-placeholder {
+
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="date"]::-moz-placeholder,
+input[type="datetime"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="search"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="url"]::-moz-placeholder,
+input[type="month"]::-moz-placeholder, input[type="week"]::-moz-placeholder, input[type="email"]::-moz-placeholder {
+
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder,
+input[type="datetime"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder,
+input[type="month"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder {
+
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus::-webkit-input-placeholder, input[type="password"]:focus::-webkit-input-placeholder, input[type="date"]:focus::-webkit-input-placeholder,
+input[type="datetime"]:focus::-webkit-input-placeholder, input[type="number"]:focus::-webkit-input-placeholder, input[type="search"]:focus::-webkit-input-placeholder,
+input[type="tel"]:focus::-webkit-input-placeholder, input[type="time"]:focus::-webkit-input-placeholder, input[type="url"]:focus::-webkit-input-placeholder,
+input[type="month"]:focus::-webkit-input-placeholder, input[type="week"]:focus::-webkit-input-placeholder, input[type="email"]:focus::-webkit-input-placeholder {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+input[type="text"]:focus:-moz-placeholder, input[type="password"]:focus:-moz-placeholder, input[type="date"]:focus:-moz-placeholder,
+input[type="datetime"]:focus:-moz-placeholder, input[type="number"]:focus:-moz-placeholder, input[type="search"]:focus:-moz-placeholder,
+input[type="tel"]:focus:-moz-placeholder, input[type="time"]:focus:-moz-placeholder, input[type="url"]:focus:-moz-placeholder,
+input[type="month"]:focus:-moz-placeholder, input[type="week"]:focus:-moz-placeholder, input[type="email"]:focus:-moz-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+input[type="text"]:focus::-moz-placeholder, input[type="password"]:focus::-moz-placeholder, input[type="date"]:focus::-moz-placeholder,
+input[type="datetime"]:focus::-moz-placeholder, input[type="number"]:focus::-moz-placeholder, input[type="search"]:focus::-moz-placeholder,
+input[type="tel"]:focus::-moz-placeholder, input[type="time"]:focus::-moz-placeholder, input[type="url"]:focus::-moz-placeholder,
+input[type="month"]:focus::-moz-placeholder, input[type="week"]:focus::-moz-placeholder, input[type="email"]:focus::-moz-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+input[type="text"]:focus:-ms-input-placeholder, input[type="password"]:focus:-ms-input-placeholder, input[type="date"]:focus:-ms-input-placeholder,
+input[type="datetime"]:focus:-ms-input-placeholder, input[type="number"]:focus:-ms-input-placeholder, input[type="search"]:focus:-ms-input-placeholder,
+input[type="tel"]:focus:-ms-input-placeholder, input[type="time"]:focus:-ms-input-placeholder, input[type="url"]:focus:-ms-input-placeholder,
+input[type="month"]:focus:-ms-input-placeholder, input[type="week"]:focus:-ms-input-placeholder, input[type="email"]:focus:-ms-input-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+textarea {
+  position: relative;
+  display: block;
+  transition: all 0.2s ease;
+
+}
+
+textarea::-webkit-input-placeholder {
+
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+textarea:-moz-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+textarea::-moz-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+textarea:-ms-input-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0
+}
+
+textarea:focus:-moz-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+textarea:focus::-moz-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+textarea:focus:-ms-input-placeholder {
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}

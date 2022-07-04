@@ -1,0 +1,232 @@
+.header {
+  position: relative;
+  padding: 25px 0;
+  min-height: 80px;
+  background-color: $mineShaft;
+  @include r(320){
+    min-height: 70px;
+    padding: 20px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo{
+  &__img{
+    @include r(1024){
+      width: 166px;
+    }
+    @include r(320){
+      width: 111px;
+    }
+  }
+}
+
+.nav {
+
+  font-family: "TTFirsNeue", sans-serif;
+  @include r(968) {
+    padding: 12px 27px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #4a4a4a;
+    top: 80px;
+  }
+  @include r(768) {
+    min-height: 45px;
+  }
+  @include r(320) {
+    top: 70px;
+  }
+
+  &__list {
+    margin-right: 87px;
+    align-items: center;
+    display: flex;
+    @include r(1200) {
+      margin-right: 30px;
+    }
+    @include r(1024) {
+      margin-right: 50px;
+    }
+    @include r(968) {
+      margin-right: 0;
+      justify-content: space-between;
+    }
+    @include r(735) {
+      display: none;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 80px;
+      @include r(1200) {
+        margin-right: 33px;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $white;
+    transition: color 0.3s;
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  @include r(1024) {
+    display: none;
+  }
+
+  &__item {
+    width: 30px;
+    height: 30px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: invert(89%) sepia(0%) saturate(61%) hue-rotate(232deg) brightness(90%) contrast(98%);
+
+
+    transition: filter 0.3s;
+
+    &:focus {
+      filter: invert(59%) sepia(8%) saturate(7192%) hue-rotate(342deg) brightness(91%) contrast(83%);
+
+
+    }
+
+    &:hover {
+      filter: invert(30%) sepia(100%) saturate(4066%) hue-rotate(339deg) brightness(101%) contrast(101%);
+    }
+
+    &:active {
+      filter: invert(71%) sepia(35%) saturate(4429%) hue-rotate(4deg) brightness(92%) contrast(95%);
+
+
+    }
+
+    &--vk {
+      background-image: url("../images/sprite.svg#vk");
+       transition: filter 0.3s;
+    }
+
+    &--inst {
+      background-image: url("../images/sprite.svg#inst");
+       transition: filter 0.3s;
+    }
+
+    &--fb {
+      background-image: url("../images/sprite.svg#fb");
+       transition: filter 0.3s;
+    }
+  }
+}
+
+.search-btn {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url("../images/icons/search-btn.svg");
+  display: none;
+  @include r(1024) {
+    display: block;
+  }
+  @include r(320) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.burger {
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  top: 92px;
+  left: 15px;
+  z-index: 10;
+  display: none;
+  @include r(735) {
+    display: block;
+  }
+  @include r(320) {
+    top: 84px;
+    left: 19px;
+  }
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - 2px);
+  width: 50%;
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+  transform: rotate(45deg);
+  top: 50%;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  transform: rotate(-45deg);
+  top: 50%;
+  width: 100%;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
