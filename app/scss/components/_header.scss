@@ -1,28 +1,164 @@
 .header {
-
-  &__top{
+  &__top {
     padding: 16px 0;
   }
-  &__top-inner{
+  &__top-inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
-  &__bottom{
+  &__top-work-bell {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 11px;
+      height: 11px;
+      background-color: #2ad100;
+      border-radius: 99px;
+    }
+  }
+  &__top-work-phone {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    font-size: 24px;
+    font-weight: 500;
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      width: 18px;
+      height: 18px;
+      background-image: url("../images/icons/phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__top-email-day {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/icons/clock.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__top-email-link {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 20px;
+      height: 16px;
+      background-image: url("../images/icons/email.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__top-download-link {
+    position: relative;
+    display: block;
+    padding: 8px 25px 8px 45px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 9px;
+    font-size: 16px;
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 14px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__top-download-link--prise {
+    margin-bottom: 10px;
+    &::after {
+      background-image: url("../images/icons/prise.svg");
+    }
+  }
+  &__top-download-link--dogovor {
+    margin-bottom: 10px;
+    &::after {
+      background-image: url("../images/icons/dogovor.svg");
+    }
+  }
+
+  &__bottom {
+    margin-bottom: 15px;
     padding: 10px 0 13px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #ffffff;
+    background-color: #343434;
   }
 }
 
-.nav{
-
-  &__list{
+.nav {
+  &__list {
     display: flex;
     justify-content: center;
   }
 
   &__item {
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 80px;
     }
+  }
+}
+
+.social-list {
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__link--viber {
+    background-image: url("../images/icons/viber.svg");
+  }
+  &__link--telegram {
+    background-image: url("../images/icons/telegram.svg");
+  }
+  &__link--viber {
+    background-image: url("../images/icons/viber.svg");
+  }
+  &__link--whatsapp {
+    background-image: url("../images/icons/whatsapp.svg");
   }
 }

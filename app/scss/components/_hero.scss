@@ -1,18 +1,91 @@
 .hero {
   &__wrapper {
+    padding-left: calc((100% - 1650px)/2);
     display: flex;
   }
 
   &__content {
-    width: 100%;
-    background-image: url("../../images/main-bg.png");
+    padding: 65px 50px 150px 50px;
+    width: calc(100% - 320px);
+    background-image: url("../images/main-bg.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center bottom;
     background-size: cover;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 800;
+    font-size: 96px;
+    color: #f43b00;
+  }
+
+  &__subtitle {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 60px;
+    position: relative;
+    padding-left: 40px;
+    max-width: 600px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    color: #141414;
+    &::after {
+      @include pseudo;
+      top: 55%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 3px;
+      height: 114px;
+      background-color: #f43b00;
+    }
+  }
+
+  &__link {
+    max-width: 344px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  &__link--transporent {
+    margin-top: 30px;
+    background-color: transparent;
+    border: 3px solid #f43b00;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+    border-radius: 9px;
+    color: #f43b00;
   }
 }
 
 .aside {
+  flex-shrink: 0;
   max-width: 320px;
   width: 100%;
+  &__item {
+    padding-right: 35px;
+  }
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: 27px 30px 27px 0 ;
+    text-align: left;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e4e4e4;
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 26px;
+      height: 26px;
+      background-color: #f43b00;
+      border-radius: 99px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('../images/icons/Icon.svg');
+    }
+  }
 }

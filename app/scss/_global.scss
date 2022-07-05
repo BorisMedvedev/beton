@@ -80,56 +80,13 @@ img {
   color: #141414;
 }
 
-.link-ul {
-  position: relative;
-  transition: color 0.2s;
-  transition: color 0.2s, filter 0.2s;
-  outline: none;
-  z-index: 99;
-
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    top: -3px;
-    left: -6px;
-    right: -6px;
-    bottom: -3px;
-    background-color: $royalpurple;
-    color: $white;
-    z-index: -1;
-    transition: color 0.2s, filter 0.2s;
-    opacity: 0;
-  }
-
-  &:focus {
-    color: $white;
-  }
-
-  &:focus::after {
-    opacity: 1;
-  }
-
-  &:hover {
-    color: $heliotrope;
-  }
-
-  &:hover::before {
-    filter: invert(19%) sepia(30%) saturate(7421%) hue-rotate(217deg)
-      brightness(92%) contrast(107%);
-  }
-
-  &:active {
-    outline: 0;
-    color: $royalpurple;
-  }
-
-  &:active::before {
-    filter: invert(69%) sepia(18%) saturate(2784%) hue-rotate(236deg)
-      brightness(98%) contrast(91%);
-  }
-
-  &:active::after {
-    background-color: transparent;
-  }
+.btn {
+  padding: 20px 40px;
+  height: 64px;
+  background: #f43b00;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
 }

@@ -22,47 +22,48 @@
   <div class="header__top">
     <div class="container">
       <div class="header__top-inner">
-
         <a class="logo link-ul" href="#">
-          <img class="logo__img" loading="lazy" src="images/icons/logo.svg" alt="логотип" />
+          <img class="logo__img" loading="lazy" src="images/logo.png" alt="логотип" width="150"/>
         </a>
 
         <ul class="social-list list-reset">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--inst" href="#" target="_blank" aria-label="ссылка на социальную сеть"></a>
+            <a class="social-list__link social-list__link--viber" href="#" target="_blank" aria-label="ссылка на социальную сеть"></a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--fb" href="#" target="_blank" aria-label="ссылка на социальную сеть"></a>
+            <a class="social-list__link social-list__link--telegram" href="#" target="_blank" aria-label="ссылка на социальную сеть"></a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="#" target="_blank" aria-label="ссылка на социальную сеть"></a>
+            <a class="social-list__link social-list__link--whatsapp" href="#" target="_blank" aria-label="ссылка на социальную сеть"></a>
           </li>
         </ul>
 
         <div class="header__top-work">
-          <a href="tel: +78002224066">
-            <span>
+          <a class="header__top-work-link" href="tel:+79037689993">
+            <span class="header__top-work-bell">
               Мы работаем. Позвоните нам
             </span>
-            +7 (800) 222-40-66
+            <span class="header__top-work-phone">
+              +7 (903) 768-99-93
+            </span>
+
           </a>
         </div>
 
         <div class="header__top-email">
-          <span> ПН-ВС </span>
-          <a href="#">beton@mail.ru</a>
-          <a href="#">beton@mail.ru</a>
+          <span class="header__top-email-day"> ПН-ВС </span>
+          <a class="header__top-email-link" href="mailto:3302165@mail.ru">3302165@mail.ru</a>
+          <a class="header__top-email-link" href="mailto:3302165@mail.ru">3302165@mail.ru</a>
         </div>
 
         <div class="header__top-download">
-          <a href="#">Скачать прайс</a>
-          <a href="#">Скачать договор</a>
+          <a class="header__top-download-link header__top-download-link--prise" href="#">Скачать прайс</a>
+          <a class="header__top-download-link header__top-download-link--dogovor" href="#">Скачать договор</a>
         </div>
 
-        <a class="exit-btn exit-btn-mabail btn-reset link-ul" href="#">
+        <button class="header__top-btn btn btn-reset">
           Обратная связь
-        </a>
-
+        </button>
       </div>
 
       <div class="burger">
@@ -70,19 +71,16 @@
         <span class="burger__line"></span>
         <span class="burger__line"></span>
       </div>
-
     </div>
   </div>
 
   <div class="header__bottom">
     <div class="container">
       <div class="header__bottom-inner">
-
         <nav class="nav" title="главное меню">
-
           <ul class="list-reset nav__list">
             <li class="nav__item">
-              <a href="#about" class="nav__link link-ul">О компании</a>
+              <a href="#about" class="nav__link link-ul">Преимущества</a>
             </li>
             <li class="nav__item">
               <a href="#gallery" class="nav__link link-ul">Наше производство</a>
@@ -94,9 +92,7 @@
               <a href="#events" class="nav__link link-ul">Контакты</a>
             </li>
           </ul>
-
         </nav>
-
       </div>
     </div>
   </div>
@@ -106,81 +102,225 @@
       <section class="hero">
   <h1 class="sr-only">Художественная Галерея Blanchard</h1>
 
-  <div class="container">
-    <div class="hero__wrapper">
-      <aside class="aside">
-        <ul class="aside__list list-reset">
-          <li class="aside__item">
-            <a href="#" class="aside__link">Бетонные смеси</a>
-          </li>
-          <li class="aside__item">
-            <a href="#" class="aside__link">Бетонные смеси</a>
-          </li>
-          <li class="aside__item">
-            <a href="#" class="aside__link">Бетонные смеси</a>
-          </li>
-          <li class="aside__item">
-            <a href="#" class="aside__link">Бетонные смеси</a>
-          </li>
-          <li class="aside__item">
-            <a href="#" class="aside__link">Бетонные смеси</a>
-          </li>
-          <li class="aside__item">
-            <a href="#" class="aside__link">Бетонные смеси</a>
-          </li>
-          <li class="aside__item">
-            <a href="#" class="aside__link">Бетонные смеси</a>
-          </li>
-        </ul>
-      </aside>
+  <div class="hero__wrapper">
+    <aside class="aside">
+      <ul class="aside__list list-reset">
+        <li class="aside__item">
+          <button class="aside__btn btn-reset">Бетонные смеси</button>
+        </li>
+        <li class="aside__item">
+          <button class="aside__btn btn-reset">Керамзитобетон</button>
+        </li>
+        <li class="aside__item">
+          <button class="aside__btn btn-reset">тощий бетон</button>
+        </li>
+        <li class="aside__item">
+          <button class="aside__btn btn-reset">ЦПС</button>
+        </li>
+        <li class="aside__item">
+          <button class="aside__btn btn-reset">растворы</button>
+        </li>
+        <li class="aside__item">
+          <button class="aside__btn btn-reset">Стоимость доставки</button>
+        </li>
+        <li class="aside__item">
+          <button class="aside__btn btn-reset">
+            Стоиомсть противоморозной добавки (ПМД)
+          </button>
+        </li>
+      </ul>
+    </aside>
 
-      <div class="hero__content">
-        <p class="hero__title">Три завода</p>
-        <p class="hero__subtitle">по производству бетона</p>
+    <div class="hero__content">
+      <p class="hero__title">Три завода</p>
+      <p class="hero__subtitle">по производству бетона</p>
 
-        <a class="hero__link" href="#">Узнать цену</a>
-        <a class="hero__link" href="#">Посмотреть на карте</a>
-      </div>
+      <a class="hero__link btn" href="#">Узнать цену</a>
+      <a class="hero__link hero__link--transporent btn" href="#">Посмотреть на карте</a>
     </div>
   </div>
 </section>
 
-      <section id="form" class="form">
-  <div class="container">
-    <h3 class="form__title title">
-      Не нашли что искали?
-    </h3>
-    <p class="form__descr">Наш специалист отвветит на все ваши вопросы</p>
-
-
-
-  </div>
-</section>
-
-      <section id="about" class="about">
+      <section id="advantage" class="advantage">
   <h2 class="sr-only">Выставка картин, Прикоснитесь к прекрасному</h2>
   <div class="container">
-    <h3 class="about__title title">
-      О нас
-    </h3>
-
-
+    <ul class="advantage__list list-reset">
+      <li class="advantage__item">
+        <span class="advantage__img advantage__img--many"></span>
+        <h4 class="advantage__title">Лучшая цена за 1 м2</h4>
+        <p class="advantage__text">
+          В Москвоском регионе -любые обьемы по ценам производителя
+        </p>
+      </li>
+      <li class="advantage__item">
+        <span class="advantage__img advantage__img--avto"></span>
+        <h4 class="advantage__title">Выгодная доставка</h4>
+        <p class="advantage__text">
+          От одного куба бетона по Москве с доступом центр
+        </p>
+      </li>
+      <li class="advantage__item">
+        <span class="advantage__img advantage__img--hands"></span>
+        <h4 class="advantage__title">Лучшая цена за 1 м2</h4>
+        <p class="advantage__text">
+          К каждому заказу при определениии стоимости учитыввается объем, срок,
+          скидки
+        </p>
+      </li>
+      <li class="advantage__item">
+        <span class="advantage__img advantage__img--client"></span>
+        <h4 class="advantage__title">Довольные клиенты</h4>
+        <p class="advantage__text">
+          Более 1000 довольных клиентов за последний год
+        </p>
+      </li>
+    </ul>
   </div>
 </section>
 
-      <section id="gallery" class="gallery">
+      <section id="prise" class="prise">
   <div class="container">
+    <h3 class="prise__title title">Наши <span>цены</span></h3>
 
-  
+    <table class="table">
+      <thead class="table">
+        <tr>
+          <th>Mарка</th>
+          <th>Класс</th>
+          <th>Технические параметры</th>
+          <th>Цена без доставки (в т.ч. НДС 20 %) руб/м3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+        <tr>
+          <td>Mарка</td>
+          <td>Класс</td>
+          <td>Технические параметры</td>
+          <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+        </tr>
+      </tbody>
+    </table>
 
-  </div>
-</section>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Классификация от 0 С до 20 С</th>
+          <th>Цена в руб (в т.ч. НДС 20 %) руб/м3 150 руб</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Классификация от 0 С до 20 С</td>
+          <td>Цена в руб (в т.ч. НДС 20 %) руб/м3 150 руб</td>
+        </tr>
+        <tr>
+          <td>Классификация от 0 С до 20 С</td>
+          <td>Цена в руб (в т.ч. НДС 20 %) руб/м3 150 руб</td>
+        </tr>
+        <tr>
+          <td>Классификация от 0 С до 20 С</td>
+          <td>Цена в руб (в т.ч. НДС 20 %) руб/м3 150 руб</td>
+        </tr>
+      </tbody>
+    </table>
 
-      <section id="catalog" class="catalog">
-  <div class="container">
-    <h3 class="catalog__title title">Каталог</h3>
-    
+    <table>
+      <thead>
+        <tr>
+          <th>Полная загрузка</th>
+          <th>Полная загрузка</th>
+          <th>Полная загрузка</th>
+          <th>Полная загрузка</th>
 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color: #f43b00;">Полная загрузка АБС руб 1м3 (с НДС)</td>
+          <td style="color: #f43b00;">Полная загрузка АБС руб 1м3 (с НДС)</td>
+          <td style="color: #f43b00;">Полная загрузка АБС руб 1м3 (с НДС)</td>
+          <td style="color: #f43b00;">Полная загрузка АБС руб 1м3 (с НДС)</td>
+        </tr>
+        <tr>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+
+        </tr>
+        <tr>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+
+        </tr>
+        <tr>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+
+        </tr>
+        <tr>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+
+        </tr>
+        <tr>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+          <td>до 5 км-360 руб</td>
+
+        </tr>
+
+      </tbody>
+    </table>
 
   </div>
 </section>
@@ -193,6 +333,18 @@
   
   </div>
 
+</section>
+
+      <section id="form" class="form">
+  <div class="container">
+    <h3 class="form__title title">
+      Не нашли что искали?
+    </h3>
+    <p class="form__descr">Наш специалист отвветит на все ваши вопросы</p>
+
+
+
+  </div>
 </section>
 
       <section id="contacts" class="contacts">

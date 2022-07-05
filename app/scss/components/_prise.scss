@@ -1,0 +1,54 @@
+.prise {
+  padding: 82px 0 78px;
+
+  &__title span {
+    color: #f43b00;
+  }
+}
+table {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  padding: 21px;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+table th {
+  text-align: center;
+  border: none;
+  padding: 21px;
+  color: #ffffff;
+}
+table td {
+  background: #e4e4e4;
+  border: none;
+  text-align: center;
+  padding: 21px;
+  color: #313030;
+}
+table tr {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #141414;
+  background: #e4e4e4;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 21px;
+  color: #313030;
+}
+
+thead tr {
+  text-align: center;
+  background-color: #343434;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.table {
+  margin-bottom: 50px;
+}
