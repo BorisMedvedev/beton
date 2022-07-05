@@ -26,16 +26,8 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1630px;
+  max-width: 1680px;
   width: 100%;
-
-  @include r(1024) {
-    max-width: 955px;
-  }
-
-  @include r(768) {
-    max-width: 698px;
-  }
 }
 
 a {
@@ -80,48 +72,16 @@ img {
 }
 
 .title {
-  margin: 0 0 15px;
-  font-weight: 400;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-size: 48px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
 
-  @include r(440) {
-    font-size: 28px;
-  }
 }
 
-.slider-btn {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background-color: $gallery;
-  border-radius: 50px;
-  outline: 2px solid transparent;
-  cursor: pointer;
-  background-image: url("../../images/icons/arrow-black.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  transition: background-color 0.2s;
 
-  &:focus {
-    outline: 2px solid $amethyst;
-  }
-
-  &:hover {
-    outline: 2px solid transparent;
-    background-color: $bilobaflower;
-  }
-
-  &:active {
-    background-color: $bilobaflower;
-    outline: 2px solid $bilobaflower;
-  }
-}
-
-.slider-btn.swiper-button-disabled {
-  pointer-events: none;
-  opacity: 0.4;
-}
 
 .link-ul {
   position: relative;
