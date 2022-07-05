@@ -31,7 +31,7 @@
     font-weight: 500;
     transition: color 0.3s;
     &:hover {
-      color: #F43B00;
+      color: #f43b00;
     }
     &::after {
       @include pseudo;
@@ -69,7 +69,7 @@
     padding-left: 30px;
     transition: color 0.3s;
     &:hover {
-      color: #F43B00;
+      color: #f43b00;
     }
 
     &::after {
@@ -93,9 +93,14 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 9px;
     font-size: 16px;
-    transition: color 0.3s;
+    transition: color 0.3s, box-shadow 0.3s;
     &:hover {
-      color: #F43B00;
+      color: #f43b00;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    &:active {
+      color: #f43b00;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
     &::after {
       @include pseudo;
@@ -143,6 +148,30 @@
       margin-right: 80px;
     }
   }
+
+  &__link{
+    position: relative;
+    height: 100%;
+    transition: color 0.3s;
+    &::after{
+      position: absolute;
+      bottom: -14px;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: #f43b00;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    &:hover::after{
+      opacity: 1;
+    }
+    &:active{
+      color: #f43b00;
+     }
+  }
 }
 
 .social-list {
@@ -154,15 +183,16 @@
   }
   &__link {
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     transition: filter 0.3s;
-    &:hover{
-      filter: drop-shadow( 0px 4px 4px rgba(0, 0, 0, 0.25) );
-
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    }
+    &:active {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
     }
   }
 
