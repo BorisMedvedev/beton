@@ -5,6 +5,22 @@
     color: #f43b00;
   }
 }
+
+.tabs-block {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    width: 260px;
+    background: #e4e4e4;
+    border-radius: 9px;
+    color: #141414;
+  }
+}
+
 table {
   text-align: center;
   margin: 0 auto;

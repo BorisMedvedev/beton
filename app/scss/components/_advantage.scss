@@ -1,7 +1,9 @@
 .advantage {
-  padding: 67px 0;
+  padding: 67px 0 30px;
 
   &__list {
+    margin: 0 auto;
+    max-width: 1400px;
     display: flex;
     justify-content: space-around;
   }
