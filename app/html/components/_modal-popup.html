@@ -1,0 +1,23 @@
+<dialog class="modal-popup">
+  <div class="modal-popup__inner">
+    <a class="logo link-ul" href="#header">
+      <img class="logo__img" loading="lazy" src="images/icons/logo.svg" width="173" height="40"
+        alt="логотип blanchard" />
+    </a>
+    <form class="modal-popup__form contacts-form">
+      <label class="modal-popup__label contacts-form__label">
+        <input class="modal-popup__input contacts-form__input" type="text" data-validate-field="name" name="Имя"
+          placeholder="Имя" />
+      </label>
+      <label class="modal-popup__label contacts-form__label">
+        <input class="modal-popup__input contacts-form__input" type="tel" data-validate-field="tel"
+          data-validate-rules="phone" name="tel" placeholder="Телефон*" />
+      </label>
+
+      <button class="modal-popup__btn contacts-form__btn btn-reset" type="submit">
+        Заказать обратный звонок
+      </button>
+    </form>
+    <button class="close-btn btn-reset">X</button>
+  </div>
+</dialog>

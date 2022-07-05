@@ -14,22 +14,28 @@ html {
 }
 
 body {
-  font-family: "roboto", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
-  min-height: 320px;
-  color: $mineShaft;
+  line-height: 1.3;
+  color: $mineshaft;
   background-color: $white;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1320px;
+  max-width: 1630px;
   width: 100%;
 
+  @include r(1024) {
+    max-width: 955px;
+  }
 
+  @include r(768) {
+    max-width: 698px;
+  }
 }
 
 a {
@@ -40,11 +46,24 @@ a {
 img {
   display: block;
   max-width: 100%;
-  width: 100%;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .site {
   overflow: hidden;
+}
+
+.btn-reset {
+  padding: 0;
+  background-color: transparent;
+  border: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 
 .sr-only {
@@ -61,16 +80,50 @@ img {
 }
 
 .title {
-  margin: 0;
-  margin-bottom: 5px;
-  font-family: "TTFirsNeue", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 31px;
+  margin: 0 0 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
 
+  @include r(440) {
+    font-size: 28px;
+  }
 }
 
-.link-kit {
+.slider-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: $gallery;
+  border-radius: 50px;
+  outline: 2px solid transparent;
+  cursor: pointer;
+  background-image: url("../../images/icons/arrow-black.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-color 0.2s;
+
+  &:focus {
+    outline: 2px solid $amethyst;
+  }
+
+  &:hover {
+    outline: 2px solid transparent;
+    background-color: $bilobaflower;
+  }
+
+  &:active {
+    background-color: $bilobaflower;
+    outline: 2px solid $bilobaflower;
+  }
+}
+
+.slider-btn.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.link-ul {
   position: relative;
   transition: color 0.2s;
   transition: color 0.2s, filter 0.2s;
@@ -85,7 +138,7 @@ img {
     left: -6px;
     right: -6px;
     bottom: -3px;
-    background-color: #bc572b;
+    background-color: $royalpurple;
     color: $white;
     z-index: -1;
     transition: color 0.2s, filter 0.2s;
@@ -101,214 +154,25 @@ img {
   }
 
   &:hover {
-    color: #ff6e30;
+    color: $heliotrope;
+  }
+
+  &:hover::before {
+    filter: invert(19%) sepia(30%) saturate(7421%) hue-rotate(217deg)
+      brightness(92%) contrast(107%);
   }
 
   &:active {
     outline: 0;
-    color: #ce4307;
+    color: $royalpurple;
+  }
+
+  &:active::before {
+    filter: invert(69%) sepia(18%) saturate(2784%) hue-rotate(236deg)
+      brightness(98%) contrast(91%);
   }
 
   &:active::after {
     background-color: transparent;
   }
-}
-
-.badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: block;
-  padding: 6px 14px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: $white;
-  background-color: $mineShaft;
-
-}
-
-.btn {
-  display: inline-block;
-  padding: 15px 22px;
-  font-family: "roboto", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: $white;
-  background-color: $orange;
-  border: 3px solid transparent;
-  transition: background-color 0.3s;
-
-  &:focus {
-    background-color: #ff6e30;
-    border: 3px solid #ce4307;
-  }
-  &:hover {
-    background-color: #bc572b;
-  }
-
-  &:active {
-    border: 3px solid transparent;
-    background-color: #ce4307;
-  }
-}
-
-.btn-transparent {
-  &:focus {
-    background-color: #bc572b;
-    border: 3px solid #ff6e30;
-  }
-  &:hover {
-    background-color: #ff6e30;
-  }
-
-  &:active {
-    border: 3px solid transparent;
-    background-color: #ce4307;
-  }
-}
-
-input[type="text"], input[type="password"], input[type="date"],
-input[type="datetime"], input[type="number"], input[type="search"],
-input[type="tel"], input[type="time"], input[type="url"],
-input[type="month"], input[type="week"], input[type="email"] {
-  position: relative;
-  display: block;
-
-}
-
-input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder,
-input[type="datetime"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder,
-input[type="tel"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder,
-input[type="month"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
-
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="date"]:-moz-placeholder,
-input[type="datetime"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="search"]:-moz-placeholder,
-input[type="tel"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="url"]:-moz-placeholder,
-input[type="month"]:-moz-placeholder, input[type="week"]:-moz-placeholder, input[type="email"]:-moz-placeholder {
-
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="date"]::-moz-placeholder,
-input[type="datetime"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="search"]::-moz-placeholder,
-input[type="tel"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="url"]::-moz-placeholder,
-input[type="month"]::-moz-placeholder, input[type="week"]::-moz-placeholder, input[type="email"]::-moz-placeholder {
-
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder,
-input[type="datetime"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder,
-input[type="tel"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder,
-input[type="month"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder {
-
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-input[type="text"]:focus::-webkit-input-placeholder, input[type="password"]:focus::-webkit-input-placeholder, input[type="date"]:focus::-webkit-input-placeholder,
-input[type="datetime"]:focus::-webkit-input-placeholder, input[type="number"]:focus::-webkit-input-placeholder, input[type="search"]:focus::-webkit-input-placeholder,
-input[type="tel"]:focus::-webkit-input-placeholder, input[type="time"]:focus::-webkit-input-placeholder, input[type="url"]:focus::-webkit-input-placeholder,
-input[type="month"]:focus::-webkit-input-placeholder, input[type="week"]:focus::-webkit-input-placeholder, input[type="email"]:focus::-webkit-input-placeholder {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-}
-
-input[type="text"]:focus:-moz-placeholder, input[type="password"]:focus:-moz-placeholder, input[type="date"]:focus:-moz-placeholder,
-input[type="datetime"]:focus:-moz-placeholder, input[type="number"]:focus:-moz-placeholder, input[type="search"]:focus:-moz-placeholder,
-input[type="tel"]:focus:-moz-placeholder, input[type="time"]:focus:-moz-placeholder, input[type="url"]:focus:-moz-placeholder,
-input[type="month"]:focus:-moz-placeholder, input[type="week"]:focus:-moz-placeholder, input[type="email"]:focus:-moz-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-}
-
-input[type="text"]:focus::-moz-placeholder, input[type="password"]:focus::-moz-placeholder, input[type="date"]:focus::-moz-placeholder,
-input[type="datetime"]:focus::-moz-placeholder, input[type="number"]:focus::-moz-placeholder, input[type="search"]:focus::-moz-placeholder,
-input[type="tel"]:focus::-moz-placeholder, input[type="time"]:focus::-moz-placeholder, input[type="url"]:focus::-moz-placeholder,
-input[type="month"]:focus::-moz-placeholder, input[type="week"]:focus::-moz-placeholder, input[type="email"]:focus::-moz-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-}
-
-input[type="text"]:focus:-ms-input-placeholder, input[type="password"]:focus:-ms-input-placeholder, input[type="date"]:focus:-ms-input-placeholder,
-input[type="datetime"]:focus:-ms-input-placeholder, input[type="number"]:focus:-ms-input-placeholder, input[type="search"]:focus:-ms-input-placeholder,
-input[type="tel"]:focus:-ms-input-placeholder, input[type="time"]:focus:-ms-input-placeholder, input[type="url"]:focus:-ms-input-placeholder,
-input[type="month"]:focus:-ms-input-placeholder, input[type="week"]:focus:-ms-input-placeholder, input[type="email"]:focus:-ms-input-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-}
-
-
-textarea {
-  position: relative;
-  display: block;
-  transition: all 0.2s ease;
-
-}
-
-textarea::-webkit-input-placeholder {
-
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-textarea:-moz-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s ease;
-}
-
-textarea::-moz-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s ease;
-}
-
-textarea:-ms-input-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s ease;
-}
-
-textarea:focus::-webkit-input-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0
-}
-
-textarea:focus:-moz-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s ease;
-}
-
-textarea:focus::-moz-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s ease;
-}
-
-textarea:focus:-ms-input-placeholder {
-  transform: translateY(-100%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s ease;
 }

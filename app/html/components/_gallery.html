@@ -1,0 +1,98 @@
+<section id="gallery" class="gallery">
+  <div class="container">
+
+    <div class="gallery__inner">
+
+      <div class="gallery-filter">
+
+        <div class="gallery-filter__box">
+          <h3 class="gallery-filter__title title">Галерея</h3>
+          <span class="gallery-filter__filter">Фильтр:</span>
+
+          <select name="Выбор" class="gallery-filter__select">
+            <option class="gallery-filter__option">Живопись</option>
+            <option class="gallery-filter__option">Рисунок</option>
+            <option class="gallery-filter__option">Скульптура</option>
+          </select>
+        </div>
+
+        <form class="gallery-filter__form">
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input" type="radio" name="radio" checked>
+            <span class="gallery-filter__input-castom"></span>
+            <span class="gallery-filter__text">XIX век</span>
+          </label>
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input " type="radio" name="radio">
+            <span class="gallery-filter__input-castom"></span>
+            <span class="gallery-filter__text">XX век</span>
+          </label>
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input " type="radio" name="radio">
+            <span class="gallery-filter__input-castom"></span>
+            <span class="gallery-filter__text">Современность</span>
+          </label>
+        </form>
+
+      </div>
+
+      <div class="gallery-slider">
+        <div class="gallery-slider__inner">
+
+          <ul class="gallery-slider__list list-reset swiper-wrapper">
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-1.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide1.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-2.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide2.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-3.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide3.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-4.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide4.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-5.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide5.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-6.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide6.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+          </ul>
+
+          <div class="gallery-slider__btn-box">
+
+            <div class="slider-btn gallery-slider__btn gallery-slider__btn-prev">
+              <span class="sr-only">кнопка предыдущий слайд</span>
+            </div>
+            <div class="gallery-slider__pagination">1</div>
+            <div class="slider-btn gallery-slider__btn gallery-slider__btn-next">
+              <span class="sr-only">кнопка следующий слайд</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

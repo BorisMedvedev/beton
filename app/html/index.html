@@ -6,13 +6,23 @@
     <main>
       @include('components/_hero.html')
       @include('components/_about.html')
+      @include('components/_gallery.html')
+      @include('components/_catalog.html')
+      @include('components/_events.html')
       @include('components/_project.html')
-         @include('components/_contacts.html')
+      @include('components/_contacts.html')
     </main>
     @include('components/_footer.html')
-
+    @include('components/_modal-popup.html')
   </div>
 
+
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.js"></script>
+
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script src="js/main.min.js "></script>
 </body>
 
 </html>

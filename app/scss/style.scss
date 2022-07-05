@@ -1,13 +1,15 @@
-@import "libs";
-@import "reset";
-@import "vars";
 @import "mixins";
+@import "libs";
+@import "vars";
 @import "fonts";
 @import "global";
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about";
+@import "./components/gallery";
+@import "./components/catalog";
+@import "./components/events";
 @import "./components/project";
 @import "./components/contacts";
 @import "./components/footer";
-
+@import "./components/modal-popup";

@@ -5,26 +5,21 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Студия “High pass”</title>
-
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=76d10f3a-6594-4483-8620-1091358b4d14&lang=ru_RU"></script>
-
-  <script src="js/just-validate.min.js" defer></script>
-  <script src="js/inputmask.min.js" defer></script>
-  <script src="js/main.min.js " defer></script>
+  <title>Blanchard</title>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="images/favicon/site.webmanifest">
   <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="images/favicon/favicon.ico">
   <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
 
+
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=76d10f3a-6594-4483-8620-1091358b4d14&lang=ru_RU">
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -32,356 +27,1105 @@
 <body>
   <div class="site">
     <header id="header" class="header">
-  <div class="container">
-    <div class="header__inner">
-
-      <a class="logo" href="#">
-        <img class="logo__img" loading="lazy" src="./images/icons/logo.svg" alt="логотип blanchard" width="190" height="30" />
-      </a>
-
-      <div class="header__wrapper">
-        <button class="burger btn-reset" type="button" aria-label="открыть меню">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <div class="burger">
           <span class="burger__line"></span>
-        </button>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </div>
+        <a class="logo link-ul" href="#">
+          <img class="logo__img" loading="lazy" src="images/icons/logo.svg" alt="логотип blanchard" />
+        </a>
+
         <nav class="nav" title="главное меню">
           <ul class="list-reset nav__list">
             <li class="nav__item">
-              <a href="#about" class="nav__link link-kit">О студии</a>
+              <a href="#about" class="nav__link link-ul">О нас</a>
             </li>
             <li class="nav__item">
-              <a href="#project" class="nav__link link-kit">Наши проекты</a>
+              <a href="#gallery" class="nav__link link-ul" data-scroll>Галерея</a>
             </li>
             <li class="nav__item">
-              <a href="#catalog" class="nav__link link-kit">Услуги</a>
+              <a href="#catalog" class="nav__link link-ul" data-scroll>Каталог</a>
             </li>
             <li class="nav__item">
-              <a href="#events" class="nav__link link-kit">Мастер-классы</a>
+              <a href="#events" class="nav__link link-ul" data-scroll>События</a>
             </li>
             <li class="nav__item">
-              <a href="#contacts" class="nav__link link-kit">Контакты</a>
+              <a href="#project" class="nav__link link-ul" data-scroll>Проекты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link link-ul" data-scroll>Контакты</a>
             </li>
           </ul>
+          <a class="exit-btn exit-btn-mabail btn-reset link-ul" href="#">Войти</a>
         </nav>
 
-        <ul class="social-list list-reset">
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--inst" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--fb" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-        </ul>
-
+        <a class="exit-btn btn-reset link-ul" href="#">Войти</a>
+        <button class="search-mobail btn-reset"></button>
 
       </div>
-      <button class="search-btn btn-reset"></button>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-inner">
+        <nav class="selection-menu">
+          <ul class="selection-menu__list list-reset">
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Реализм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link2.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link3.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Импрессионизм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Постимпрессионизм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Авангард
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Футуризм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </nav>
+
+        <form class="form-search">
+          <button class="form-search__btn btn-reset" type="submit">
+            <span class="sr-only">поиск по сайту</span>
+          </button>
+          <label class="form-search__label">
+            <input class="form-search__input" type="text" placeholder="Поиск по сайту" />
+          </label>
+        </form>
+
+      </div>
     </div>
   </div>
 </header>
 
     <main>
       <section class="hero">
-  <h1 class="sr-only">Мастер-класс от Игоря Робова</h1>
-  <div class="container">
-    <ul class="hero-content list-reset">
 
-      <li class="hero-content__item hero-content__item1">
-        <picture>
-          <source srcset="images/hero/320/hero-1.jpg" media="(max-width: 735px)">
-          <source srcset="images/hero/768/hero-1.jpg" media="(max-width: 768px)">
-          <source srcset="images/hero/1024/hero-1.jpg" media="(max-width: 1340px)" width="466" height="623">
-          <img src="images/hero/hero-1.jpg" alt="фото" />
-        </picture>
-        <div class="hero-content__item-info">
-          <p class="hero-content__item-text">Мастер-класс от Игоря Робова</p>
-          <h2 class="hero-content__item-title">
-            Неоновый фотосет 2.0 7 июля 20:00
-          </h2>
-          <a class="hero-content__item-btn btn" href="">Узнать больше</a>
-        </div>
-        <a class="hero-content__item-link badge" href="">#мастеркласс</a>
-      </li>
-      <li class="hero-content__item hero-content__item2">
-        <p class="hero-content__item-descr">Работы участников предыдущего мастер-класса</p>
-        <picture>
-          <source srcset="images/hero/320/hero-2.jpg" media="(max-width: 735px)">
-          <source srcset="images/hero/768/hero-2.jpg" media="(max-width: 768px)">
-          <source srcset="images/hero/1024/hero-2.jpg" media="(max-width: 1340px)" width="466" height="332">
-          <img src="images/hero/hero-2.jpg" alt="фото" />
-        </picture>
-      </li>
-      <li class="hero-content__item hero-content__item3">
-        <picture>
-          <source srcset="images/hero/320/hero-3.jpg" media="(max-width: 735px)">
-          <source srcset="images/hero/768/hero-3.jpg" media="(max-width: 768px)">
-          <source srcset="images/hero/1024/hero-3.jpg" media="(max-width: 1340px)" width="218" height="186">
-          <img src="images/hero/hero-3.jpg" alt="фото" />
-        </picture>
-      </li>
-      <li class="hero-content__item hero-content__item4">
-        <picture>
-          <source srcset="images/hero/320/hero-4.jpg" media="(max-width: 735px)">
-          <source srcset="images/hero/768/hero-4.jpg" media="(max-width: 768px)">
-          <source srcset="images/hero/1024/hero-4.jpg" media="(max-width: 1340px)" width="218" height="186">
-          <img src="images/hero/hero-4.jpg" alt="фото" />
-        </picture>
-      </li>
-    </ul>
+  <h1 class="sr-only">Художественная Галерея Blanchard</h1>
+  <div class="container">
+    <p class="hero__title">Прикоснитесь к прекрасному</p>
+    <p class="hero__descr">
+      Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для
+      новых предложений.
+    </p>
+    <a class="hero__link" href="#contacts">Подписаться на рассылку</a>
+  </div>
+
+</section>
+
+      <section id="about" class="about">
+  <h2 class="sr-only">Выставка картин, Прикоснитесь к прекрасному</h2>
+  <div class="container">
+    <h3 class="about__title title">
+      О нас
+    </h3>
+    <p class="about__text">
+      Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+      участника как способного принимать собственные решения касаемо распределения внутренних резервов
+      и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет
+      за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
+      высокое качество озиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
+      ряда внеочередных
+      мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках
+      спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных
+      слоев населения, а&nbsp;значит, должны быть разоблачены.
+    </p>
+
   </div>
 </section>
 
-      <section class="about" id="about">
+      <section id="gallery" class="gallery">
   <div class="container">
-    <h3 class="about__title title">О студии</h3>
-    <div class="about__inner">
-      <p class="about__inner-text">
-        В рамках спецификации современных стандартов, интерактивные
-        прототипы, инициированные исключительно синтетически, ограничены
-        исключительно образом мышления. Предварительные выводы
-        неутешительны: высокотехнологичная концепция общественного
-        уклада требует от нас анализа соответствующих условий
-        активизации! Следует отметить, что семантический разбор внешних
-        противодействий фиксирует необходимость распределения внутренних
-        резервов и ресурсов. Безусловно, граница обучения кадров
-        предоставляет широкие возможности для первоочередных требований.
-        Повседневная практика показывает, что глубокий уровень
-        погружения предполагает независимые способы реализации новых
-        принципов формирования материально-технической и кадровой базы.
-        Приятно, граждане, наблюдать, как явные признаки
-        институционализации являются только методом политического
-        участия и нарушающими общечеловеческие нормы этики.
-      </p>
 
-      <div class="about__inner-img-form">
-        <picture>
-          <source srcset="images/about/about-4.jpg" media="(max-width: 680px)">
-          <source srcset="images/about/about-3.jpg" media="(max-width: 768px)">
-          <source srcset="images/about/about-2.jpg" media="(max-width: 1340px)">
-          <img class="about__inner-img" src="images/about/about-1.jpg" alt="Книжная гравюра">
-        </picture>
-        <p class="about__inner-img-form-text">
-          Подписаться на рассылку
-        </p>
-        <form class="form">
-          <label class="form__label">
-            <input type="text" class="form__input" placeholder="E-mail" />
+    <div class="gallery__inner">
+
+      <div class="gallery-filter">
+
+        <div class="gallery-filter__box">
+          <h3 class="gallery-filter__title title">Галерея</h3>
+          <span class="gallery-filter__filter">Фильтр:</span>
+
+          <select name="Выбор" class="gallery-filter__select">
+            <option class="gallery-filter__option">Живопись</option>
+            <option class="gallery-filter__option">Рисунок</option>
+            <option class="gallery-filter__option">Скульптура</option>
+          </select>
+        </div>
+
+        <form class="gallery-filter__form">
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input" type="radio" name="radio" checked>
+            <span class="gallery-filter__input-castom"></span>
+            <span class="gallery-filter__text">XIX век</span>
           </label>
-          <button class=" btn-reset btn form__btn">Отправить</button>
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input " type="radio" name="radio">
+            <span class="gallery-filter__input-castom"></span>
+            <span class="gallery-filter__text">XX век</span>
+          </label>
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input " type="radio" name="radio">
+            <span class="gallery-filter__input-castom"></span>
+            <span class="gallery-filter__text">Современность</span>
+          </label>
         </form>
+
       </div>
+
+      <div class="gallery-slider">
+        <div class="gallery-slider__inner">
+
+          <ul class="gallery-slider__list list-reset swiper-wrapper">
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-1.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide1.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-2.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide2.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-3.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide3.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-4.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide4.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-5.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide5.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <picture>
+                <source srcset="images/slider/slidemob-6.jpg" media="(max-width: 440px)">
+                <img class="gallery-slider__img" src="images/slider/slide6.jpg" alt="Книжная гравюра">
+              </picture>
+            </li>
+          </ul>
+
+          <div class="gallery-slider__btn-box">
+
+            <div class="slider-btn gallery-slider__btn gallery-slider__btn-prev">
+              <span class="sr-only">кнопка предыдущий слайд</span>
+            </div>
+            <div class="gallery-slider__pagination">1</div>
+            <div class="slider-btn gallery-slider__btn gallery-slider__btn-next">
+              <span class="sr-only">кнопка следующий слайд</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      <section id="catalog" class="catalog">
+  <div class="container">
+    <h3 class="catalog__title title">Каталог</h3>
+    <p class="catalog__text">
+      Акционеры крупнейших компаний, которые представляют собой яркий пример
+      континентально-европейского типа политической культуры, будут объявлены
+      нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь
+      частью общей картины, стремящиеся вытеснить традиционное производство,
+      нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые
+      жаждут быть функционально разнесены на&nbsp;независимые элементы.
+    </p>
+
+    <div class="catalog__wrapper">
+      <div class="catalog__author-information catalog__author-information--active" data-target="domenico">
+        <picture>
+          <source srcset="images/author77.jpg" media="(max-width: 768px)">
+          <source srcset="images/authortabl-1.jpg" media="(max-width: 1600px)">
+          <img class="catalog__author-img" src="images/author.jpg" alt="Книжная гравюра">
+        </picture>
+        <h4 class="catalog__author-title">Доменико Гирландайо</h4>
+        <span class="catalog__author-date">2 июня 1448 — 11 января 1494.</span>
+        <p class="catalog__text">
+          Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+          художественной династии, которую продолжили его брат Давид и&nbsp;сын
+          Ридольфо. Глава художественной мастерской, где юный Микеланджело
+          в&nbsp;течение года овладевал профессиональными навыками. Автор
+          фресковых циклов, в которых выпукло, со&nbsp;всевозможными
+          подробностями показана домашняя жизнь библейских персонажей (в
+          их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того
+          времени).
+        </p>
+      </div>
+
+      <div class="catalog__author-information" data-target="two">
+        <picture>
+          <source srcset="images/authortabl-1.jpg" media="(max-width: 1600px)">
+          <img class="catalog__author-img" src="images/author.jpg" alt="Книжная гравюра">
+        </picture>
+        <h4 class="catalog__author-title">Что мы о нём знаем?</h4>
+        <span class="catalog__author-date"></span>
+        <p class="catalog__text catalog__text--mb">
+          Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+          на&nbsp;что посмотреть!
+
+          <a class="inner-link" href="#gallery">В галерею</a>
+        </p>
+      </div>
+
+      <ul class="accordion-list list-reset">
+        <li class="accordion-list__item accordion">
+          <button class="accordion-list__btn btn-reset" type="button">
+            C 1400 по 1499 гг.
+          </button>
+          <div class="accordion-list__content">
+            <div class="accordion-list__inner-content">
+              <ul class="accordion-list__inner-list list-reset">
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Бенедетто ди Биндо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Бергоньоне, Амброджо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Биссоло, Франческо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Больтраффио, Джованни
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Бонсиньори, Франческо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Боттичини, Рафаэлло
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Брамантино
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Бреа, Людовико
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Бьяджо д’Антонио Туччи
+                  </button>
+                </li>
+              </ul>
+
+              <ul class="accordion-list__inner-list list-reset">
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Веккьетта
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Андреа Верроккьо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset accordion-list__inner-btn--active"
+                    data-path="domenico">
+                    Доменико Гирландайо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Беноццо Гоццоли
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Граначчи, Франческо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Грегорио ди Чекко
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Джованни да Удине
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Джованни ди Паоло
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Джорджоне
+                  </button>
+                </li>
+              </ul>
+
+              <ul class="accordion-list__inner-list list-reset">
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Парентино, Бернардо
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Пезеллино
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Пьетро Перуджино
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Перуцци, Бальдассаре
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Пизанелло
+                  </button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset" data-path="two">
+                    Пинтуриккьо
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-list__item accordion">
+          <button class="accordion-list__btn btn-reset" type="button">
+            C 1500 по 1599 гг.
+          </button>
+          <div class="accordion-list__content">
+            <div class="accordion-list__inner-content accordion-list__inner-content-noflex">
+              <div class="accordion-list__inner-list accordion-list__inner-list--flex">
+                <div class="accordion-list__inner-img"></div>
+
+                <div class="accordion-list__inner-box">
+                  <div class="accordion-list__inner-title">
+                    Здесь пока пусто
+                  </div>
+                  <div class="accordion-list__inner-descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
+                  </div>
+                  <a class="accordion-list__inner-link inner-link link-ul link-ul" href="#gallery">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-list__item accordion">
+          <button class="accordion-list__btn btn-reset" type="button">
+            C 1600 по 1699 гг.
+          </button>
+          <div class="accordion-list__content">
+            <div class="accordion-list__inner-content accordion-list__inner-content-noflex">
+              <div class="accordion-list__inner-list accordion-list__inner-list--flex">
+                <div class="accordion-list__inner-img"></div>
+
+                <div class="accordion-list__inner-box">
+                  <div class="accordion-list__inner-title">
+                    Здесь пока пусто
+                  </div>
+                  <div class="accordion-list__inner-descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
+                  </div>
+                  <a class="accordion-list__inner-link inner-link link-ul" href="#gallery">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-list__item accordion">
+          <button class="accordion-list__btn btn-reset" type="button">
+            C 1700 по 1799 гг.
+          </button>
+          <div class="accordion-list__content">
+            <div class="accordion-list__inner-content accordion-list__inner-content-noflex">
+              <div class="accordion-list__inner-list accordion-list__inner-list--flex">
+                <div class="accordion-list__inner-img"></div>
+
+                <div class="accordion-list__inner-box">
+                  <div class="accordion-list__inner-title">
+                    Здесь пока пусто
+                  </div>
+                  <div class="accordion-list__inner-descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
+                  </div>
+                  <a class="accordion-list__inner-link inner-link link-ul" href="#gallery">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-list__item accordion">
+          <button class="accordion-list__btn btn-reset" type="button">
+            C 1800 по 1899 гг.
+          </button>
+          <div class="accordion-list__content">
+            <div class="accordion-list__inner-content accordion-list__inner-content-noflex">
+              <div class="accordion-list__inner-list accordion-list__inner-list--flex">
+                <div class="accordion-list__inner-img"></div>
+
+                <div class="accordion-list__inner-box">
+                  <div class="accordion-list__inner-title">
+                    Здесь пока пусто
+                  </div>
+                  <div class="accordion-list__inner-descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
+                  </div>
+                  <a class="accordion-list__inner-link inner-link link-ul" href="#gallery">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-list__item accordion">
+          <button class="accordion-list__btn btn-reset" type="button">
+            C 1900 по 1999 гг.
+          </button>
+          <div class="accordion-list__content">
+            <div class="accordion-list__inner-content accordion-list__inner-content-noflex">
+              <div class="accordion-list__inner-list accordion-list__inner-list--flex">
+                <div class="accordion-list__inner-img"></div>
+
+                <div class="accordion-list__inner-box">
+                  <div class="accordion-list__inner-title">
+                    Здесь пока пусто
+                  </div>
+                  <div class="accordion-list__inner-descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
+                  </div>
+                  <a class="accordion-list__inner-link inner-link link-ul" href="#gallery">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-list__item accordion">
+          <button class="accordion-list__btn btn-reset" type="button">
+            C 2022 г.
+          </button>
+          <div class="accordion-list__content">
+            <div class="accordion-list__inner-content accordion-list__inner-content-noflex">
+              <div class="accordion-list__inner-list accordion-list__inner-list--flex">
+                <div class="accordion-list__inner-img"></div>
+
+                <div class="accordion-list__inner-box">
+                  <div class="accordion-list__inner-title">
+                    Здесь пока пусто
+                  </div>
+                  <div class="accordion-list__inner-descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
+                  </div>
+                  <a class="accordion-list__inner-link inner-link link-ul" href="#gallery">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
-      <section class="project" id="project">
+      <section id="events" class="events">
   <div class="container">
-    <h3 class="project__title title">Наши проекты</h3>
-    <ul class="project-content list-reset">
-      <li class="project-content__item project-content__item-1">
-        <picture>
-          <source srcset="images/project/320/project-1.jpg" media="(max-width: 440px)" />
-          <source srcset="images/project/1024/project-1.jpg" media="(max-width: 1340px)" />
-          <img class="project-content__item-img" src="images/project/project-1.jpg" alt="фото" />
-        </picture>
-        <p class="project-content__item-text">
-          Синтетически, смешаны с не уникальными данными до степени
-          Синтетически, смешаны с не уникальными данными до степени
-        </p>
-        <span class="project-content__item-date">16 июня</span>
-        <a class="project-content__item-link badge" href="">#пейзаж</a>
-      </li>
-      <li class="project-content__item project-content__item-2">
-        <picture>
-          <source srcset="images/project/320/project-2.jpg" media="(max-width: 440px)" />
-          <source srcset="images/project/1024/project-2.jpg" media="(max-width: 1340px)" />
-          <img class="project-content__item-img" src="images/project/project-2.jpg" alt="фото" />
-        </picture>
-        <p class="project-content__item-text">
-          В своём стремлении улучшить опыт мы упускаем, что явные В своём
-          стремлении улучшить опыт мы упускаем, что явные
-        </p>
-        <span class="project-content__item-date">16 июня</span>
-        <a class="project-content__item-link badge" href="">#портрет</a>
-      </li>
-      <li class="project-content__item project-content__item-3">
-        <picture>
-          <source srcset="images/project/320/project-3.jpg" media="(max-width: 320px)" />
-          <source srcset="images/project/768/project-3.jpg" media="(max-width: 768px)" />
-          <source srcset="images/project/1024/project-3.jpg" media="(max-width: 1340px)" />
-          <img class="project-content__item-img" src="images/project/project-3.jpg" alt="фото" />
-        </picture>
-        <p class="project-content__item-text">
-          Равным образом, высокое качество позиционных Равным образом, высокое
-          качество позиционных
-        </p>
-        <span class="project-content__item-date">16 июня</span>
-        <a class="project-content__item-link badge" href="">#предмет</a>
-      </li>
-      <li class="project-content__item project-content__item-4">
-        <picture>
-          <source srcset="images/project/320/project-4.jpg" media="(max-width: 560px)" />
-          <source srcset="images/project/768/project-4.jpg" media="(max-width: 768px)" />
-          <source srcset="images/project/1024/project-4.jpg" media="(max-width: 1340px)" />
-          <img class="project-content__item-img" src="images/project/project-4.jpg" alt="фото" />
-        </picture>
+    <h3 class="events__title title">
+      События
+    </h3>
 
-        <div class="info-block">
-          <div class="info-block__box">
-            <span class="info-block__date">9 апреля</span>
-            <h4 class="info-block__title info-block__title--right">
-              Cемантический разбор
-            </h4>
-            <p class="info-block__descr">
-              В рамках спецификации современных стандартов, интерактивные
-              прототипы
-            </p>
-          </div>
-          <button class="info-block__btn btn-reset btn btn-transparent">О проекте</button>
-        </div>
+    <div class="events-swiper">
+      <ul class="events-swiper__wrapper swiper-wrapper list-reset">
 
-        <a class="project-content__item-link badge" href="">#fuji</a>
-      </li>
-      <li class="project-content__item project-content__item-5">
-        <picture>
-          <source srcset="images/project/320/project-5.jpg" media="(max-width: 560px)" />
-          <source srcset="images/project/768/project-5.jpg" media="(max-width: 768px)" />
-          <source srcset="images/project/1024/project-5.jpg" media="(max-width: 1340px)" />
-          <img class="project-content__item-img" src="images/project/project-5.jpg" alt="фото" />
-        </picture>
-        <a class="project-content__item-link badge" href="">#проектзабвение</a>
+        <li class="events-swiper__slide swiper-slide">
+          <article class="card-events">
 
-        <div class="info-block">
-          <div class="info-block__box">
-            <span class="info-block__date">16 июня</span>
-            <h4 class="info-block__title">Забвение</h4>
-            <p class="info-block__descr">
-              Играет важную роль в формировании глубокомысленных рассуждений
-            </p>
-          </div>
-          <button class="info-block__btn btn-transparent btn-reset btn">О проекте</button>
-        </div>
-      </li>
-      <li class="project-content__item project-content__item-6">
-        <picture>
-          <source srcset="images/project/320/project-6.jpg" media="(max-width: 440px)" />
-          <source srcset="images/project/1024/project-6.jpg" media="(max-width: 1340px)" />
-          <img class="project-content__item-img" src="images/project/project-6.jpg" alt="фото" />
-        </picture>
-        <p class="project-content__item-text project-content__item-text--clamp">
-          Как принято считать, многие известные личности и по сей день остаются
-          уделом либералов Как принято считать, многие известные личности и по
-          сей день остаются уделом либералов
-        </p>
-        <span class="project-content__item-date">9 марта</span>
-        <a class="project-content__item-link badge" href="">#ретушь</a>
-      </li>
-      <li class="project-content__item project-content__item-7">
-        <picture>
-          <source srcset="images/project/320/project-7.jpg" media="(max-width: 440px)" />
-          <source srcset="images/project/1024/project-7.jpg" media="(max-width: 1340px)" />
-          <img class="project-content__item-img" src="images/project/project-7.jpg" alt="фото" />
-        </picture>
-        <p class="project-content__item-text project-content__item-text--clamp">
-          С учётом сложившейся международной обстановки, новая модель
-          организационной С учётом сложившейся международной обстановки, новая
-          модель организационной
-        </p>
-        <span class="project-content__item-date">1 марта</span>
-        <a class="project-content__item-link badge" href="">#портрет</a>
-      </li>
-    </ul>
+            <picture>
+              <source srcset="images/events/eventsmob-1.jpg" media="(max-width: 440px)">
+              <source srcset="images/events/eventst768-1.jpg" media="(max-width: 768px)">
+              <source srcset="images/events/eventstab-1.jpg" media="(max-width: 1024px)">
+              <img class="images/events/events1.jpg" src="images/events/events1.jpg" alt="Книжная гравюра">
+            </picture>
+
+            <div class="card-events__content">
+
+              <div class="card-events__info">
+                <span class="card-events__info-date">
+                  Музей им. Щусева<br>
+                  <time class="card-events__info-date" datetime="2010-07-26T23:42+03:00">
+                    с 20 марта по 30 апреля
+                  </time>
+                </span>
+                <div>
+
+                  <h4 class="card-events__info-title">Книжная гравюра в живом восприятии</h4>
+                </div>
+                <p class="card-events__info-text">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо.
+                </p>
+              </div>
+
+              <div class="card-events__links">
+                <a class="link-ul card-events__link" href="#">Подробнее</a>
+              </div>
+
+            </div>
+
+          </article>
+        </li>
+
+        <li class="events-swiper__slide swiper-slide">
+          <article class="card-events">
+
+            <picture>
+              <source srcset="images/events/eventsmob-2.jpg" media="(max-width: 440px)">
+              <source srcset="images/events/eventst768-2.jpg" media="(max-width: 768px)">
+              <source srcset="images/events/eventstab-2.jpg" media="(max-width: 1024px)">
+              <img class="images/events/events2.jpg" src="images/events/events2.jpg" alt="Книжная гравюра">
+            </picture>
+
+            <div class="card-events__content">
+
+              <div class="card-events__info">
+                <span class="card-events__info-date">
+                  ММОМА
+                  <time class="card-events__info-date" datetime="2010-07-26T23:42+03:00">
+                    24 марта 19:00
+                  </time>
+                </span>
+                <h4 class="card-events__info-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h4>
+                <p class="card-events__info-text">
+
+                  Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                  факта.
+
+                </p>
+              </div>
+
+              <div class="card-events__links">
+                <a class="link-ul card-events__link" href="#">Подробнее</a>
+              </div>
+
+            </div>
+
+          </article>
+        </li>
+
+        <li class="events-swiper__slide swiper-slide">
+          <article class="card-events">
+
+            <picture>
+              <source srcset="images/events/eventsmob-3.jpg" media="(max-width: 440px)">
+              <source srcset="images/events/eventst768-3.jpg" media="(max-width: 768px)">
+              <source srcset="images/events/eventstab-3.jpg" media="(max-width: 1024px)">
+              <img class="images/events/events3.jpg" src="images/events/events3.jpg" alt="Книжная гравюра">
+            </picture>
+
+            <div class="card-events__content">
+
+              <div class="card-events__info">
+                <span class="card-events__info-date">
+                  Еврейский музей
+                  <time class="card-events__info-date" datetime="2010-07-26T23:42+03:00">
+                    с 31 марта по 21 апреля
+                  </time>
+                </span>
+                <h4 class="card-events__info-title">Выставка «Формация 2020»</h4>
+                <p class="card-events__info-text">
+                  Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в
+                  формировании глубокомысленных рассуждений.
+                </p>
+              </div>
+
+              <div class="card-events__links">
+                <a class="link-ul card-events__link" href="#">Подробнее</a>
+              </div>
+
+            </div>
+
+          </article>
+        </li>
+
+        <li class="events-swiper__slide swiper-slide">
+          <article class="card-events">
+
+            <picture>
+              <source srcset="images/events/eventsmob-4.jpg" media="(max-width: 440px)">
+              <source srcset="images/events/eventst768-4.jpg" media="(max-width: 768px)">
+              <source srcset="images/events/eventstab-4.jpg" media="(max-width: 1024px)">
+              <img class="images/events/events4.jpg" src="images/events/events4.jpg" alt="Книжная гравюра">
+            </picture>
+
+            <div class="card-events__content">
+
+              <div class="card-events__info">
+                <span class="card-events__info-date">
+                  ММАМ
+                  <time class="card-events__info-date" datetime="2010-07-26T23:42+03:00">
+                    с 8 апреля по 20 мая
+                  </time>
+                </span>
+                <h4 class="card-events__info-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
+                <p class="card-events__info-text">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо.
+                </p>
+              </div>
+
+              <div class="card-events__links">
+                <a class="link-ul card-events__link" href="#">Подробнее</a>
+              </div>
+
+            </div>
+
+          </article>
+        </li>
+
+        <li class="events-swiper__slide swiper-slide">
+          <article class="card-events">
+
+            <picture>
+              <source srcset="images/events/eventsmob-5.jpg" media="(max-width: 440px)">
+              <source srcset="images/events/eventst768-5.jpg" media="(max-width: 768px)">
+              <source srcset="images/events/eventstab-5.jpg" media="(max-width: 1024px)">
+              <img class="images/events/events5.jpg" src="images/events/events5.jpg" alt="Книжная гравюра">
+            </picture>
+
+            <div class="card-events__content">
+
+              <div class="card-events__info">
+                <span class="card-events__info-date">
+                  Третьяковка на Крымском валу
+                  <time class="card-events__info-date" datetime="2010-07-26T23:42+03:00">
+                    с 30 марта по 30 апреля
+                  </time>
+                </span>
+                <h4 class="card-events__info-title">XXIV Международная биеннале молодого искусства</h4>
+                <p class="card-events__info-text">
+                  Внезапно, реплицированные с зарубежных источников, современные исследования.
+                </p>
+              </div>
+
+              <div class="card-events__links">
+                <a class="link-ul card-events__link" href="#">Подробнее</a>
+              </div>
+
+            </div>
+
+          </article>
+        </li>
+
+      </ul>
+
+      <div class="slider-btn events-swiper__btn events-swiper__prev">
+        <span class="sr-only">кнопка следующий слайд</span>
+      </div>
+
+      <div class="slider-btn events-swiper__btn events-swiper__next">
+        <span class="sr-only">кнопка следующий слайд</span>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
   </div>
 </section>
 
-         <section class="contacts" id="contacts">
-  <div class="container contacts__container">
-    <h3 class="contacts__title title">Контакты</h3>
-    <div class="contacts__inner">
+      <section id="project" class="project">
+  <div class="container">
+    <h3 class="title project__title ">
+      Проекты
+    </h3>
+    <p class="project__text">
+      Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
+      фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
+      с&nbsp;не
+      уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус
+      бесполезности. Прежде
+      всего, постоянное информационно-пропагандистское<button class="tultip tultip-1 btn-reset tippy-box"
+        data-tippy-root></button>обеспечение
+      нашей
+      деятельности однозначно фиксирует
+      необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия
+      представителей
+      оппозиции могут быть рассмотрены<button class="tultip tultip-2 btn-reset"></button>исключительно в&nbsp;разрезе
+      маркетинговых и
+      финансовых<button class="tultip tultip-3 btn-reset"></button>предпосылок. Банальные, но
+      неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым
+      свершениям,
+      которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной
+      неузнаваемости.
+      Подробнее: <a class="project__text-link link-ul" href="#">blanchard-art.ru/projects</a>
+    </p>
+    <h4 class="project__partners-title">Партнёры проектов:</h4>
 
-      <div class="map" id="contacts-map">
+    <div class="project__partners-slider">
 
-        <div class="map__info">
-          <button class="btn-close btn-reset"></button>
-          <h2 class="map__title">Студия “High pass”</h2>
-          <address class="map__address">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис №
-            82 </address>
-          <a class="map__phone" href="tel:+749542423532">+7 (495) 42-423-532</a>
-        </div>
+      <div class="slider-btn project__partners-btn project__partners-btn-prev">
+        <span class="sr-only">кнопка предыдущий слайд</span>
+      </div>
+      <div class="project-slider">
+        <ul class="project-slider__wrapper swiper-wrapper list-reset">
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie1.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie2.png" alt="картинка">
+            </a>
+          </li>
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie3.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie4.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie5.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie6.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie7.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie8.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie9.png" alt="картинка">
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="swiper-pagination"></div>
 
       </div>
+      <div class="slider-btn project__partners-btn project__partners-btn-next">
+        <span class="sr-only">кнопка следующий слайд</span>
+      </div>
 
+    </div>
 
-      <div class="contacts__form">
-        <h5 class="contacts__form-title title">Оставить заявку</h5>
-        <p class="contacts__form-descr">
-          Оставьте ваши данные, указав в графе “Комментарий” желаемые
-          время и дату съемки или другого мероприятия
-        </p>
+  </div>
 
-        <form id="form" class="application-form" action="">
+</section>
 
-          <label class="application-form__label">
-            <input id="name" name="name" type="text" class="application-form__input" placeholder="Имя" data-validate-field="name" required />
+      <section id="contacts" class="contacts">
+  <h2 class="sr-only">Один из ведущих флорентийских художников Кватроченто</h2>
+  <div class="contacts__form">
+    <div class="container">
+      <div class="contacts__inner">
+        <div class="contacts__form-info">
+          <div class="contacts__form-info-text">Шоурум №4</div>
+          <address class="contacts__form-info-address">
+            Леонтьевский переулок, дом 5/1
+          </address>
+        </div>
+
+        <form class="contacts-form">
+          <label class="contacts-form__label">
+            <input class="contacts-form__input" type="text" data-validate-field="name" name="Имя" placeholder="Имя" />
           </label>
-          <label class="application-form__label">
-            <input id="email" name="email" type="email" class="application-form__input" placeholder="E-mail" data-validate-field="mail" required />
+          <label class="contacts-form__label">
+            <input class="contacts-form__input" type="tel" data-validate-field="tel" data-validate-rules="phone"
+              name="tel" placeholder="Телефон*" />
           </label>
 
-          <textarea class="application-form__textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
-          <button class="application-form__btn btn-reset btn">
-            Отправить
+          <button class="contacts-form__btn btn-reset" type="submit">
+            Заказать обратный звонок
+          </button>
+          <button class="contacts-form__btn contacts-form__btn--mobail btn-reset" type="submit">
+            Заказать
           </button>
         </form>
+
+        <div class="contacts__form-social">
+          <div class="contacts__form-social-title">Связаться в один клик</div>
+
+          <ul class="social-list list-reset">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--whatsapp" href="https://clck.bar/L4582d" target="_blank">
+                <span class="sr-only"> ссылка в месенджер </span>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--telegram" href="https://t.me/BMEDV" target="_blank">
+                <span class="sr-only">ссылка в месенджер</span></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+
+  <div id="contacts__map"></div>
 </section>
 
     </main>
     <footer class="footer">
   <div class="container">
-
     <div class="footer__inner">
-
-     <div class="logo-box">
-      <a class="logo footer__logo" href="#header">
-        <img class="logo__img" loading="lazy" src="./images/icons/logo.svg" alt="логотип blanchard" width="190"
-          height="30" />
+      <a class="logo link-ul" href="#header">
+        <img class="logo__img" loading="lazy" src="images/icons/logo.svg" width="173" height="40"
+          alt="логотип blanchard" />
       </a>
-      <span>Фотостудия High pass® 2018-2022</span>
-     </div>
-
-      <div class="footer__info">
-        <p>Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра.
-          <span>© Имоджен Каннингем</span></p>
-      </div>
-
-      <div class="footer__social-inner">
-        <span class="footer__social-text">Больше интересного:</span>
-        <ul class="social-list footer__social list-reset">
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--inst" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--fb" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-        </ul>
-      </div>
-
+      <ul class="footer-social-list list-reset">
+        <li class="footer-social-list__item">
+          <a class="footer-social-list__link footer-social-list__link--vk " href="https://vk.com/medvedevbn"
+            target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
+        </li>
+        <li class="footer-social-list__item">
+          <a class="footer-social-list__link footer-social-list__link--inst " href="https://vk.com/medvedevbn"
+            target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
+        </li>
+        <li class="footer-social-list__item">
+          <a class="footer-social-list__link footer-social-list__link--fb " href="https://vk.com/medvedevbn"
+            target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
+        </li>
+      </ul>
     </div>
 
   </div>
+
 </footer>
 
+    <dialog class="modal-popup">
+  <div class="modal-popup__inner">
+    <a class="logo link-ul" href="#header">
+      <img class="logo__img" loading="lazy" src="images/icons/logo.svg" width="173" height="40"
+        alt="логотип blanchard" />
+    </a>
+    <form class="modal-popup__form contacts-form">
+      <label class="modal-popup__label contacts-form__label">
+        <input class="modal-popup__input contacts-form__input" type="text" data-validate-field="name" name="Имя"
+          placeholder="Имя" />
+      </label>
+      <label class="modal-popup__label contacts-form__label">
+        <input class="modal-popup__input contacts-form__input" type="tel" data-validate-field="tel"
+          data-validate-rules="phone" name="tel" placeholder="Телефон*" />
+      </label>
+
+      <button class="modal-popup__btn contacts-form__btn btn-reset" type="submit">
+        Заказать обратный звонок
+      </button>
+    </form>
+    <button class="close-btn btn-reset">X</button>
+  </div>
+</dialog>
 
   </div>
 
+
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.js"></script>
+
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script src="js/main.min.js "></script>
 </body>
 
 </html>

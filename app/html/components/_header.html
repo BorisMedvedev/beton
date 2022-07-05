@@ -1,50 +1,208 @@
 <header id="header" class="header">
-  <div class="container">
-    <div class="header__inner">
-
-      <a class="logo" href="#">
-        <img class="logo__img" loading="lazy" src="./images/icons/logo.svg" alt="логотип blanchard" width="190" height="30" />
-      </a>
-
-      <div class="header__wrapper">
-        <button class="burger btn-reset" type="button" aria-label="открыть меню">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <div class="burger">
           <span class="burger__line"></span>
-        </button>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </div>
+        <a class="logo link-ul" href="#">
+          <img class="logo__img" loading="lazy" src="images/icons/logo.svg" alt="логотип blanchard" />
+        </a>
+
         <nav class="nav" title="главное меню">
           <ul class="list-reset nav__list">
             <li class="nav__item">
-              <a href="#about" class="nav__link link-kit">О студии</a>
+              <a href="#about" class="nav__link link-ul">О нас</a>
             </li>
             <li class="nav__item">
-              <a href="#project" class="nav__link link-kit">Наши проекты</a>
+              <a href="#gallery" class="nav__link link-ul" data-scroll>Галерея</a>
             </li>
             <li class="nav__item">
-              <a href="#catalog" class="nav__link link-kit">Услуги</a>
+              <a href="#catalog" class="nav__link link-ul" data-scroll>Каталог</a>
             </li>
             <li class="nav__item">
-              <a href="#events" class="nav__link link-kit">Мастер-классы</a>
+              <a href="#events" class="nav__link link-ul" data-scroll>События</a>
             </li>
             <li class="nav__item">
-              <a href="#contacts" class="nav__link link-kit">Контакты</a>
+              <a href="#project" class="nav__link link-ul" data-scroll>Проекты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link link-ul" data-scroll>Контакты</a>
             </li>
           </ul>
+          <a class="exit-btn exit-btn-mabail btn-reset link-ul" href="#">Войти</a>
         </nav>
 
-        <ul class="social-list list-reset">
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--inst" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--fb" href="https://vk.com/medvedevbn" target="_blank" aria-label="ссылка на социальную сеть"></a>
-          </li>
-        </ul>
-
+        <a class="exit-btn btn-reset link-ul" href="#">Войти</a>
+        <button class="search-mobail btn-reset"></button>
 
       </div>
-      <button class="search-btn btn-reset"></button>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-inner">
+        <nav class="selection-menu">
+          <ul class="selection-menu__list list-reset">
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Реализм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link2.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link3.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link4.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Импрессионизм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Постимпрессионизм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Авангард
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="selection-menu__item">
+              <button class="selection-menu__btn btn-reset link-ul">
+                Футуризм
+              </button>
+
+              <ul class="list-scroll list-reset" data-simplebar>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link1.jpg')">Тинторетто</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="#"
+                    style="background-image: url('images/bg/select/link1.jpg')">Фридрих</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Леонардо</a>
+                </li>
+                <li class="list-scroll__item">
+                  <a class="list-scroll__link" href="# "
+                    style="background-image: url('images/bg/select/link1.jpg')">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </nav>
+
+        <form class="form-search">
+          <button class="form-search__btn btn-reset" type="submit">
+            <span class="sr-only">поиск по сайту</span>
+          </button>
+          <label class="form-search__label">
+            <input class="form-search__input" type="text" placeholder="Поиск по сайту" />
+          </label>
+        </form>
+
+      </div>
     </div>
   </div>
 </header>
