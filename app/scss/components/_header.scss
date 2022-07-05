@@ -1,3 +1,28 @@
 .header {
-  
+
+  &__top{
+    padding: 16px 0;
+  }
+  &__top-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom{
+    padding: 10px 0 13px;
+  }
+}
+
+.nav{
+
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    &:not(:last-child){
+      margin-right: 80px;
+    }
+  }
 }
