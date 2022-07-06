@@ -19,131 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function gallerySlider() {
-    var swiper1 = new Swiper(".gallery-slider__inner", {
-      slidesPerView: 3,
-      spaceBetween: 50,
-      slidesPerGroup: 1,
-
-      navigation: {
-        nextEl: ".gallery-slider__btn-next",
-        prevEl: ".gallery-slider__btn-prev",
-      },
-
-      pagination: {
-        el: ".gallery-slider__pagination",
-        type: "fraction",
-        clickable: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          centeredSlides: true,
-        },
-        640: {
-          slidesPerView: 1,
-          centeredSlides: true,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 34,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 34,
-        },
-        1340: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-      },
-    });
-  }
-
-  function eventsSwiper() {
-    var swiper2 = new Swiper(".events-swiper", {
-      slidesPerView: 3,
-      spaceBetween: 50,
-
-      navigation: {
-        nextEl: ".events-swiper__next",
-        prevEl: ".events-swiper__prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          centeredSlides: 50,
-        },
-        640: {
-          slidesPerView: 2,
-          centeredSlides: 50,
-        },
-        768: {
-          slidesPerGroup: 3,
-          slidesPerView: 2,
-          spaceBetween: 50,
-        },
-        1024: {
-          slidesPerGroup: 2,
-          slidesPerView: 3,
-          spaceBetween: 27,
-        },
-        1340: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-        1600: {
-          slidesPerGroup: 2,
-        },
-      },
-    });
-  }
-
-  function projectSlider() {
-    var swiper3 = new Swiper(".project-slider", {
-      slidesPerView: 3,
-      spaceBetween: 50,
-      navigation: {
-        nextEl: ".project__partners-btn-next",
-        prevEl: ".project__partners-btn-prev",
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          centeredSlides: true,
-        },
-        640: {
-          slidesPerView: 1,
-          centeredSlides: true,
-        },
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 34,
-        },
-        940: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 50,
-        },
-        1340: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-        1560: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-      },
-    });
-  }
 
   function contactsMap() {
     ymaps.ready(init);
@@ -169,75 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  const defaultSelect = () => {
-    const element = document.querySelector(".gallery-filter__select");
-    const choices = new Choices(element, {
-      searchEnabled: false,
-    });
-  };
 
-  function newAccordion() {
-    new Accordion(".accordion-list", {
-      duration: 400,
-      openOnInit: [0],
-      elementClass: "accordion",
-      triggerClass: "accordion-list__btn",
-      panelClass: "accordion-list__content",
-      activeClass: "accordion--active",
-    });
-  }
-
-  function showData() {
-    const button = document.querySelectorAll(".selection-menu__btn");
-    const drop = document.querySelectorAll(".list-scroll");
-
-    button.forEach((el) => {
-      el.addEventListener("click", (e) => {
-        drop.forEach((el) => {
-          el.classList.remove("active");
-        });
-        e.currentTarget
-          .closest("li")
-          .querySelector(".list-scroll")
-          .classList.toggle("active");
-      });
-    });
-
-    document.addEventListener("click", (e) => {
-      if (
-        !e.target.classList.contains("list-scroll") &&
-        !e.target.classList.contains("selection-menu__btn")
-      ) {
-        drop.forEach((el) => {
-          el.classList.remove("active");
-        });
-      }
-    });
-  }
-
-  function tulTip() {
-    tippy(".tultip-1", {
-      content:
-        " уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде",
-      theme: "amethyst",
-
-      trigger: "click",
-    });
-    tippy(".tultip-2", {
-      content:
-        "современных социальных резервов призывают нас к новым свершениям,",
-      theme: "amethyst",
-
-      trigger: "click",
-    });
-    tippy(".tultip-3", {
-      content:
-        "с не уникальными данными до степени совершенной неузнаваемости.",
-      theme: "amethyst",
-
-      trigger: "click",
-    });
-  }
 
   function tabsContent() {
     let tabsBtn = document.querySelectorAll(".accordion-list__inner-btn");
@@ -330,16 +137,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   contactsMap();
   navigation();
-  defaultSelect();
-  newAccordion();
-  showData();
-  gallerySlider();
-  eventsSwiper();
-  projectSlider();
-  tulTip();
   tabsContent();
   contactsForm();
   burgerBtn();
   modalPopup();
   burgerBtn1();
+});
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 80,
+  centeredSlides: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
