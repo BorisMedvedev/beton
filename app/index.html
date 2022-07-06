@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Заказ Бетона по Москве</title>
 
-  <script src="//code.jivo.ru/widget/33Xp5sCzcB" async></script>
+  
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=76d10f3a-6594-4483-8620-1091358b4d14&lang=ru_RU">
   </script>
@@ -265,8 +265,8 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Классификация от 0 С до 20 С</th>
-            <th>Цена в руб (в т.ч. НДС 20 %) руб/м3 150 руб</th>
+            <th colspan="2" style="text-transform:uppercase;">Стоимость противоморозной добавки</th>
+
           </tr>
         </thead>
         <tbody>
@@ -288,10 +288,8 @@
       <table>
         <thead>
           <tr>
-            <th>Полная загрузка</th>
-            <th>Полная загрузка</th>
-            <th>Полная загрузка</th>
-            <th>Полная загрузка</th>
+            <th style="text-transform:uppercase;" colspan="4">Стоимость доставки</th>
+
           </tr>
         </thead>
         <tbody>
@@ -338,15 +336,27 @@
 </section>
 
       <section id="map" class="map">
-  <div class="container">
-    <h3 class="title map__title">Зона покрытия нашей компании</h3>
+  <h3 class="title map__title">Зона покрытия нашей компании</h3>
 
-    <div class="map__inner">
+  <div class="map__inner">
+      <div class="container map__container">
       <div class="map__left">
-        <img src="images/mixer.png" alt="" width="684"/>
+        <img src="images/mixer.png" alt="" width="684" />
+        <div class="map__form">
+          <h4 class="map__form-title">Закажите бетон</h4>
+          <p class="map__form-text">
+            мы рассчитаем нужный обьем бетона, нужной марки за 2 минуты
+          </p>
+          <form action="#" class="form-map">
+            <label for="#" class="form-map__label">
+              <input class="form-map__input" placeholder="Ваш телефон" />
+            </label>
+            <button class="form-map__btn btn btn-reset">Заказать</button>
+          </form>
+        </div>
       </div>
       <div class="map__right">
-        <div id="contacts__map"></div>
+        <img src="images/map.png" alt="" width="864" height="712"/>
       </div>
     </div>
   </div>
@@ -354,10 +364,26 @@
 
       <section id="form" class="form">
   <div class="container">
-    <h3 class="form__title title">
-      Не нашли что искали?
-    </h3>
-    <p class="form__descr">Наш специалист отвветит на все ваши вопросы</p>
+
+    <div class="form__inner">
+
+      <h3 class="form__title title">
+        Не нашли что искали?
+      </h3>
+      <p class="form__descr">Наш специалист отвветит на все ваши вопросы</p>
+      <form action="#" class="form-sab">
+        <label for="#" class="form-sab__label">
+          <input type="text" class="form-sab__input" placeholder="Имя">
+        </label>
+        <label for="#" class="form-sab__label">
+          <input type="tel" class="form-sab__input" placeholder="Телефон">
+        </label>
+        <label for="#" class="form-sab__label">
+          <input type="email" class="form-sab__input" placeholder="Почта">
+        </label>
+        <button class="form-sab__btn btn btn-reset">Отправить</button>
+      </form>
+    </div>
 
 
 
