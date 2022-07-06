@@ -1,6 +1,265 @@
 .footer {
-  padding: 48px 0;
-  background-color: $black;
+  padding: 45px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/footer-bg.png");
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__nav--list {
+    flex-direction: column;
+  }
+
+  &__address-text {
+    position: relative;
+    margin: 0;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      display: block;
+      content: "";
+      width: 25px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url("../images/icons/location.svg");
+    }
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__nav-link {
+    transition: color 0.3s;
+    font-weight: 500;
+    &:hover {
+      color: #f43b00;
+    }
+    &::after {
+      bottom: -5px;
+    }
+  }
+
+  &__left-tel {
+    margin-bottom: 16px;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 24px;
+    &::after {
+      left: 0;
+    }
+  }
+  &__left-email {
+    margin-bottom: 16px;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 24px;
+    &::after {
+      left: 0;
+    }
+  }
+
+  &__right-btn {
+    margin-top: 20px;
+  }
+}
+address {
+  font-style: normal;
+}
+
+.overlay {
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: none;
+  z-index: 800;
+}
+
+.popup {
+  padding: 50px 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../images/popup-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 999;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #f43b00;
+  }
+  &__descr {
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.close-popup {
+  position: absolute;
+  top: 17px;
+  right: 29px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.close-popup:before {
+  content: "";
+  background-color: rgb(255, 0, 0);
+  position: absolute;
+  height: 3px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  transform: rotate(-45deg);
+  transition: background-color 0.3s;
+}
+
+.close-popup:after {
+  content: "";
+  background-color: rgb(255, 0, 0);
+  position: absolute;
+  height: 3px;
+  width: 31px;
+  top: 11px;
+  transform: rotate(45deg);
+  left: -4px;
+  transition: background-color 0.3s;
+}
+
+.close-popup:hover::before {
+  background-color: #ffffff;
+}
+.close-popup:hover::after {
+  background-color: #ffffff;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__label {
+    width: 100%;
+    & span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    padding: 17px;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      color: #141414;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+  }
+}
+
+.checkbox-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-castom {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 15px;
+  transform: translateY(3px);
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    content: "";
+    width: 10px;
+    height: 9px;
+    background-image: url("../images/icons/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+  }
+}
+
+.checkbox-input:checked + .radio-castom::before {
+  opacity: 1;
+}
+
+input {
+  border: 1px solid transparent;
+  transition: border 0.3s;
+  &:focus {
+    border: 1px solid #f43b00;
+  }
+  &:hover {
+    border: 1px solid #f43b00;
+  }
+  &:active {
+    border: 1px solid #f43b00;
+  }
 }

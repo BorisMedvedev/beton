@@ -4,89 +4,170 @@
 
     <ul class="tabs-block list-reset">
       <li class="tabs-block__item">
-        <button class="tabs-block__btn btn btn-reset active">Бетонные смеси</button>
+        <button
+          class="tabs-block__btn btn btn-reset tabs-block__btn--active"
+          data-path="1"
+        >
+          Бетонные смеси
+        </button>
       </li>
       <li class="tabs-block__item">
-        <button class="tabs-block__btn btn btn-reset">Керамзитобетон</button>
+        <button class="tabs-block__btn btn btn-reset" data-path="2">
+          Керамзитобетон
+        </button>
       </li>
       <li class="tabs-block__item">
-        <button class="tabs-block__btn btn btn-reset">Тощий бетон</button>
+        <button class="tabs-block__btn btn btn-reset" data-path="3">
+          Тощий бетон
+        </button>
       </li>
       <li class="tabs-block__item">
-        <button class="tabs-block__btn btn btn-reset">Цпс</button>
+        <button class="tabs-block__btn btn btn-reset" data-path="4">Цпс</button>
       </li>
       <li class="tabs-block__item">
-        <button class="tabs-block__btn btn btn-reset">Растворы</button>
+        <button class="tabs-block__btn btn btn-reset" data-path="5">
+          Растворы
+        </button>
       </li>
     </ul>
 
     <div class="prise__table">
-      <table class="table">
-        <thead class="table">
-          <tr>
-            <th>Mарка</th>
-            <th>Класс</th>
-            <th>Технические параметры</th>
-            <th>Цена без доставки (в т.ч. НДС 20 %) руб/м3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-          <tr>
-            <td>Mарка</td>
-            <td>Класс</td>
-            <td>Технические параметры</td>
-            <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-prise table-prise--active" data-target="1">
+        <table class="table">
+          <thead class="table">
+            <tr>
+              <th>Mарка</th>
+              <th>Класс</th>
+              <th>Технические параметры</th>
+              <th>Цена без доставки (в т.ч. НДС 20 %) руб/м3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-prise" data-target="2">
+        <table class="table">
+          <thead class="table">
+            <tr>
+              <th>Mарка2</th>
+              <th>Класс2</th>
+              <th>Технические параметры2</th>
+              <th>Цена без доставки (в т.ч. НДС 20 %) руб/м3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mарка2</td>
+              <td>Класс2</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка2</td>
+              <td>Класс2</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка2</td>
+              <td>Класс2</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка2</td>
+              <td>Класс2</td>
+              <td>Технические параметры2</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка2</td>
+              <td>Класс2</td>
+              <td>Технические параметры2</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка</td>
+              <td>Класс2</td>
+              <td>Технические параметры2</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка2</td>
+              <td>Класс2</td>
+              <td>Технические параметры</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+            <tr>
+              <td>Mарка2</td>
+              <td>Класс2</td>
+              <td>Технические параметры2</td>
+              <td>Цена без доставки (в т.ч. НДС 20 %) руб/м3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-prise" data-target="3" style="text-align: center; color: #F43B00; font-weight:700; font-size: 60px;">Тощий бетон</div>
+      <div class="table-prise" data-target="4" style="text-align: center; color: #F43B00; font-weight:700; font-size: 60px;">Цпс</div>
+      <div class="table-prise" data-target="5" style="text-align: center; color: #F43B00; font-weight:700; font-size: 60px;">Растворы</div>
 
       <table class="table">
         <thead>
           <tr>
-            <th colspan="2" style="text-transform:uppercase;">Стоимость противоморозной добавки</th>
-
+            <th colspan="2" style="text-transform: uppercase">
+              Стоимость противоморозной добавки
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -108,8 +189,9 @@
       <table>
         <thead>
           <tr>
-            <th style="text-transform:uppercase;" colspan="4">Стоимость доставки</th>
-
+            <th style="text-transform: uppercase" colspan="4">
+              Стоимость доставки
+            </th>
           </tr>
         </thead>
         <tbody>

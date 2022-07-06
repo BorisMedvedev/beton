@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   function navigation() {
     const anchors = document.querySelectorAll(
-      ".nav__link, .hero__link, .accordion-list__inner-link, .logo, .inner-link"
+      ".nav__link, .logo, .hero__link"
     );
 
     for (let anchor of anchors) {
@@ -47,53 +47,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function tabsContent() {
-    let tabsBtn = document.querySelectorAll(".accordion-list__inner-btn");
-    let tabsItem = document.querySelectorAll(".catalog__author-information");
+    let tabsBtn = document.querySelectorAll(".tabs-block__btn");
+    let tabsItem = document.querySelectorAll(".table-prise");
 
     tabsBtn.forEach(function (el) {
       el.addEventListener("click", function (e) {
         const path = e.currentTarget.dataset.path;
 
         tabsBtn.forEach(function (btn) {
-          btn.classList.remove("accordion-list__inner-btn--active");
-          e.currentTarget.classList.add("accordion-list__inner-btn--active");
+          btn.classList.remove("tabs-block__btn--active");
+          e.currentTarget.classList.add("tabs-block__btn--active");
 
           tabsItem.forEach(function (el) {
-            el.classList.remove("catalog__author-information--active");
+            el.classList.remove("table-prise--active");
             document
               .querySelector(`[data-target='${path}']`)
-              .classList.add("catalog__author-information--active");
+              .classList.add("table-prise--active");
           });
         });
       });
     });
   }
 
-  function contactsForm() {
-    var Selector = document.querySelector("input[type='tel']");
-    var im = new Inputmask("+7 (999)-999-99-99");
-    im.mask(Selector);
-    new JustValidate(".contacts-form", {
-      rules: {
-        name: {
-          required: true,
-          minLength: 2,
-          maxLength: 10,
-        },
-        phone: {
-          required: true,
-          function: (name, value) => {
-            const phone = Selector.Inputmask.unmaskevalue();
-            return Number(phone) && phone.length === 10;
-          },
-        },
-        mail: {
-          required: true,
-          email: true,
-        },
-      },
-    });
-  }
+  // function contactsForm() {
+  //   var Selector = document.querySelector("input[type='tel']");
+  //   var im = new Inputmask("+7 (999)-999-99-99");
+  //   im.mask(Selector);
+  //   new JustValidate(".contacts-form", {
+  //     rules: {
+  //       name: {
+  //         required: true,
+  //         minLength: 2,
+  //         maxLength: 10,
+  //       },
+  //       phone: {
+  //         required: true,
+  //         function: (name, value) => {
+  //           const phone = Selector.Inputmask.unmaskevalue();
+  //           return Number(phone) && phone.length === 10;
+  //         },
+  //       },
+  //       mail: {
+  //         required: true,
+  //         email: true,
+  //       },
+  //     },
+  //   });
+  // }
 
   function burgerBtn() {
     const burger = document.querySelector(".burger");
@@ -158,4 +158,44 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+
+// Модальное окно
+
+// открыть по кнопке
+$('.js-button-campaign').click(function() {
+
+	$('.js-overlay-campaign').fadeIn();
+	$('.js-overlay-campaign').addClass('disabled');
+	$("body").css("overflow", "hidden");
+});
+
+// закрыть на крестик
+$('.js-close-campaign').click(function() {
+	$('.js-overlay-campaign').fadeOut();
+		$("body").css("overflow", "visible");
+
+});
+
+// закрыть по клику вне окна
+$(document).mouseup(function (e) {
+	var popup = $('.js-popup-campaign');
+	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+		$('.js-overlay-campaign').fadeOut();
+			$("body").css("overflow", "visible");
+
+	}
+});
+
+// открыть по таймеру
+$(window).on('load', function () {
+	setTimeout(function(){
+		if($('.js-overlay-campaign').hasClass('disabled')) {
+			return false;
+		} else {
+
+			$(".js-overlay-campaign").fadeIn();
+		}
+	}, 10000);
 });

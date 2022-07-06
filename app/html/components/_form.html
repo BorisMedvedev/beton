@@ -4,18 +4,18 @@
     <div class="form__inner">
 
       <h3 class="form__title title">
-        Не нашли что искали?
+        <span class="span-color">Не нашли</span> что искали?
       </h3>
       <p class="form__descr">Наш специалист отвветит на все ваши вопросы</p>
-      <form action="#" class="form-sab">
-        <label for="#" class="form-sab__label">
-          <input type="text" class="form-sab__input" placeholder="Имя">
+      <form action="mail.php" method="POST" class="form-sab">
+        <label name="name" for="#" class="form-sab__label">
+          <input type="text" class="form-sab__input" placeholder="Имя" required>
         </label>
         <label for="#" class="form-sab__label">
-          <input type="tel" class="form-sab__input" placeholder="Телефон">
+          <input name="phone" type="tel" class="form-sab__input" placeholder="Телефон" required>
         </label>
         <label for="#" class="form-sab__label">
-          <input type="email" class="form-sab__input" placeholder="Почта">
+          <input name="email" type="email" class="form-sab__input" placeholder="Почта" required>
         </label>
         <button class="form-sab__btn btn btn-reset">Отправить</button>
       </form>

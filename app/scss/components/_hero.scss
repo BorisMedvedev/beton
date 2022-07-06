@@ -83,6 +83,11 @@
     text-align: left;
     text-transform: uppercase;
     border-bottom: 1px solid #e4e4e4;
+    transition: color 0.3s, border 0.3s;
+    &:hover{
+      color: #f43b00;
+      border-color: #f43b00;
+    }
     &::after {
       @include pseudo;
       top: 50%;

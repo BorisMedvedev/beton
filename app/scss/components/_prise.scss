@@ -6,6 +6,11 @@
   }
 }
 
+.prise__table{
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
 .tabs-block {
   margin: 0 auto;
   margin-bottom: 50px;
@@ -21,10 +26,10 @@
     border: 1px solid transparent;
     text-transform: uppercase;
     font-size: 18px;
-    transition: color 0.3s, box-shadow 0.3s;
+    transition: color 0.3s, box-shadow 0.3s, border 0.3s;
     &:hover{
       background-color: #e4e4e4;
-      color: #F43B00;
+      color: prise__table;
 
     }
     &:active{
@@ -34,8 +39,9 @@
     }
   }
 }
-.tabs-block__btn.active{
+.tabs-block__btn--active{
   border: 1px solid #F43B00;
+  color: #F43B00;
 
 }
 table {
@@ -84,4 +90,17 @@ thead tr {
 
 .table {
   margin-bottom: 50px;
+}
+
+
+
+.table-prise {
+  margin: 0 auto;
+  max-width: 1500px;
+  display: none;
+}
+
+
+.table-prise.table-prise--active {
+  display: block;
 }

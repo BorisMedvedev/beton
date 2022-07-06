@@ -18,7 +18,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &__title {
@@ -64,7 +63,8 @@
     outline: none;
     background: #aaaaaa;
     border-radius: 9px;
-    color: #d8d8d8;
+    color: #fff;
+    
     &::placeholder {
       font-family: "Inter", sans-serif;
       font-style: normal;

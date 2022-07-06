@@ -5,11 +5,17 @@
   &__inner {
     padding: 20px 0 40px 0;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
     background-image: url("../../images/form-bg.png");
   }
 
+  &__title{
+    margin: 0;
+  }
+
   &__descr {
+    margin: 0;
+    margin-bottom: 40px;
     text-align: center;
   }
 }
