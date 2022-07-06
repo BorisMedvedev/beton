@@ -1,0 +1,39 @@
+.map {
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right{
+    position: relative;
+    box-shadow: -2px 2px 23px -1px rgba(244, 59, 0, 0.5);
+    border-radius: 32px;
+    &::after{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      content: '';
+      width: 730px;
+      height: 630px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('../images/map-bg.svg');
+z-index: 999;
+    }
+  }
+
+
+  #contacts__map {
+    width: 860px;
+    height: 700px;
+    border-radius: 32px;
+    overflow: hidden;
+
+  }
+
+
+}
+

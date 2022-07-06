@@ -2,21 +2,8 @@
 
 }
 
-#contacts__map {
-  width: 300px;
-  height: 300px;
 
-  @include r(600) {
-    height: 320px;
-  }
-}
 
-[class*="ground-pane"] {
-  filter: grayscale(1);
-}
 
-.js-validate-error-label {
-  position: absolute;
-  top: -31px;
-  font-size: 12px;
-}
+
+

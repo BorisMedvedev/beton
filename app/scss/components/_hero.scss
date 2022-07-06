@@ -2,6 +2,9 @@
   &__wrapper {
     padding-left: calc((100% - 1650px)/2);
     display: flex;
+    @include r(1640) {
+      padding-left: calc((100% - 1300px)/2);
+    }
   }
 
   &__content {
@@ -58,6 +61,11 @@
     border-radius: 9px;
     color: #f43b00;
     line-height: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: #f43b00;
+      color: #141414;
+    }
   }
 }
 
