@@ -1,6 +1,21 @@
 .header {
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: transform 0.3s linear;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+
+
   &__top {
+    position: relative;
     padding: 16px 0;
+    @include r (768){
+      padding: 10px 0;
+      background-color: #fff;
+    }
   }
   &__top-inner {
     display: flex;
@@ -8,10 +23,22 @@
     align-items: center;
   }
 
+  &__top-work{
+    @include r (768){
+      display: none;
+    }
+  }
+
   &__top-work-bell {
     position: relative;
     display: block;
     padding-left: 20px;
+    @include r (1350){
+      font-size: 18px;
+    }
+    @include r (1200){
+      font-size: 16px;
+    }
     &::after {
       @include pseudo;
       top: 50%;
@@ -30,6 +57,12 @@
     font-size: 24px;
     font-weight: 500;
     transition: color 0.3s;
+    @include r (1350){
+      font-size: 18px;
+    }
+    @include r (1200){
+      font-size: 16px;
+    }
     &:hover {
       color: #f43b00;
     }
@@ -63,11 +96,32 @@
     }
   }
 
+
+
+  &__top-btn{
+    @include r (1350){
+      padding: 20px 20px;
+      max-width: 180px;
+      font-size: 16px;
+    }
+    @include r (768){
+      display: none;
+    }
+  }
+
+  &__top-email{
+    @include r (1024){
+      display: none;
+    }
+  }
   &__top-email-link {
     position: relative;
     display: block;
     padding-left: 30px;
     transition: color 0.3s;
+    @include r (1350){
+      font-size: 18px;
+    }
     &:hover {
       color: #f43b00;
     }
@@ -82,6 +136,12 @@
       background-image: url("../images/icons/email.svg");
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+
+  &__top-download{
+    @include r (768){
+      display: none;
     }
   }
 
@@ -134,6 +194,9 @@
     line-height: 27px;
     color: #ffffff;
     background-color: #343434;
+    @include r (768){
+      display: none;
+    }
   }
 }
 
@@ -153,6 +216,9 @@
     position: relative;
     height: 100%;
     transition: color 0.3s;
+    @include r (1024){
+      font-size: 16px;
+    }
     &::after{
       position: absolute;
       bottom: -14px;
@@ -164,7 +230,7 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-    
+
     &:hover::after{
       opacity: 1;
     }
@@ -176,6 +242,9 @@
 
 .social-list {
   display: flex;
+  @include r (1200){
+    display: none;
+  }
   &__item {
     &:not(:last-child) {
       margin-right: 10px;
@@ -209,3 +278,78 @@
     background-image: url("../images/icons/whatsapp.svg");
   }
 }
+
+.header.hide{
+  transform: translateY(-197px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
+}
+.logo{
+  @include r (1350){
+    max-width: 100px;
+  }
+}
+
+
+.burger {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f43b00;
+  cursor: pointer;
+  display: none;
+  @include r (768){
+    display: block;
+  }
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - 2px);
+}
+
+.burger--active .burger__line {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+.burger--active::before {
+    transform: rotate(45deg);
+    top: 50%;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+.burger--active::after {
+    transform: rotate(-45deg);
+    top: 50%;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+

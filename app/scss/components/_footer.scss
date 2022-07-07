@@ -5,13 +5,32 @@
   background-position: center;
   background-image: url("../images/footer-bg.png");
 
+  &__social-list {
+    display: flex;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+    @include r(1200) {
+      flex-wrap: wrap;
+    }
+    @include r(1066) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    @include r(1066) {
+      margin-bottom: 25px;
+    }
   }
 
   &__nav--list {
     flex-direction: column;
+    @include r(1066) {
+      margin-bottom: 25px;
+    }
   }
 
   &__address-text {
@@ -20,6 +39,9 @@
     padding-left: 40px;
     margin-bottom: 10px;
     font-weight: 500;
+    @include r(560) {
+      font-size: 18px;
+    }
     &::after {
       position: absolute;
       top: 50%;
@@ -39,6 +61,9 @@
   &__nav-item {
     &:not(:last-child) {
       margin-bottom: 35px;
+      @include r(1200) {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -58,6 +83,9 @@
     padding-left: 30px;
     font-weight: 500;
     font-size: 24px;
+    @include r(560) {
+      font-size: 18px;
+    }
     &::after {
       left: 0;
     }
@@ -67,6 +95,9 @@
     padding-left: 30px;
     font-weight: 500;
     font-size: 24px;
+    @include r(560) {
+      font-size: 18px;
+    }
     &::after {
       left: 0;
     }
@@ -78,6 +109,9 @@
 }
 address {
   font-style: normal;
+  @include r(560) {
+    font-size: 18px;
+  }
 }
 
 .overlay {
@@ -109,12 +143,19 @@ address {
   border-radius: 50px;
   border: 1px solid #ffffff;
   overflow: hidden;
+  @include r(560) {
+    max-width: 95%;
+    padding: 25px 20px 20px;
+  }
   &__title {
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 36px;
     line-height: 44px;
     color: #f43b00;
+    @include r(560) {
+      font-size: 22px;
+    }
   }
   &__descr {
     max-width: 450px;
@@ -125,6 +166,9 @@ address {
     line-height: 140%;
     text-align: center;
     color: #ffffff;
+    @include r(560) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -199,6 +243,9 @@ address {
     border-radius: 10px;
     border: 1px solid transparent;
     transition: border-color 0.3s;
+    @include r(560) {
+      height: 40px;
+    }
 
     &::placeholder {
       font-family: "Inter";
@@ -212,6 +259,8 @@ address {
 
   &__btn {
     margin-bottom: 20px;
+    @include r(560) {
+    }
   }
 }
 
@@ -261,5 +310,25 @@ input {
   }
   &:active {
     border: 1px solid #f43b00;
+  }
+}
+
+.menu-mobail {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  transform: translateX(200%);
+
+  &__download {
+    display: inline-block;
+  }
+
+  &__work {
+    display: block;
   }
 }

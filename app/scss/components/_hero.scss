@@ -1,9 +1,23 @@
 .hero {
+  padding-top: 220px;
+  @include r(768) {
+    padding-top: 70px;
+  }
   &__wrapper {
     padding-left: calc((100% - 1650px)/2);
     display: flex;
     @include r(1640) {
       padding-left: calc((100% - 1300px)/2);
+    }
+    @include r(1200) {
+      padding-left: calc((100% - 1100px)/2);
+    }
+    @include r(1024) {
+      padding-left: calc((100% - 950px)/2);
+    }
+    @include r(840) {
+      padding-left: 0;
+      flex-direction: column;
     }
   }
 
@@ -14,6 +28,17 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
+    @include r(840) {
+      width: 100%;
+    }
+    @include r (768){
+      padding: 150px 15px;
+      height: 100vh;
+      background-position: bottom;
+      box-shadow: inset 0 0 0 200vw rgba(255, 255, 255, 0.5);
+
+
+    }
   }
 
   &__title {
@@ -22,6 +47,13 @@
     font-weight: 800;
     font-size: 96px;
     color: #f43b00;
+    @include r(1200) {
+      font-size: 68px;
+    }
+    @include r(560) {
+      font-size: 40px;
+      margin-bottom: 25px;
+    }
   }
 
   &__subtitle {
@@ -35,6 +67,15 @@
     font-size: 64px;
     line-height: 77px;
     color: #141414;
+    @include r(1200) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    @include r(560) {
+      margin-bottom: 40px;
+      font-size: 28px;
+      line-height: 40px;
+    }
     &::after {
       @include pseudo;
       top: 55%;
@@ -43,6 +84,9 @@
       width: 3px;
       height: 114px;
       background-color: #f43b00;
+      @include r(1200) {
+        height: 50px;
+      }
     }
   }
 
@@ -51,6 +95,18 @@
     width: 100%;
     display: block;
     text-align: center;
+    @include r(1200) {
+      padding: 10px 15px;
+      max-width: 250px;
+      font-size: 16px;
+      line-height: 40px;
+    }
+    @include r(560) {
+      padding: 5px 15px;
+      max-width: 200px;
+      font-size: 14px;
+      line-height: 55px;
+    }
   }
 
   &__link--transporent {
@@ -62,6 +118,18 @@
     color: #f43b00;
     line-height: 20px;
     transition: background-color 0.3s, color 0.3s;
+    @include r(1200) {
+      padding: 10px 15px;
+      max-width: 250px;
+      font-size: 16px;
+      line-height: 52px;
+    }
+    @include r(560) {
+      padding: 5px 15px;
+      max-width: 200px;
+      font-size: 14px;
+      line-height: 55px;
+    }
     &:hover {
       background-color: #f43b00;
       color: #141414;
@@ -73,6 +141,11 @@
   flex-shrink: 0;
   max-width: 320px;
   width: 100%;
+  @include r(840) {
+    padding-left: 15px;
+    max-width: 100%;
+    order: 1;
+  }
   &__item {
     padding-right: 35px;
   }

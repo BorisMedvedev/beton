@@ -30,9 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       var myPlacemark = new ymaps.Placemark(
-        [55.75846806898367, 37.60108849999989],
-        {},
-        {
+        [55.75846806898367, 37.60108849999989], {}, {
           iconLayout: "default#image",
           iconImageHref: "../images/icons/group.svg",
           iconImageSize: [20, 20],
@@ -101,9 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.addEventListener("click", toggleNav);
 
     function toggleNav() {
-      burger.classList.contains("is-active")
-        ? burger.classList.remove("is-active")
-        : burger.classList.add("is-active");
+      burger.classList.contains("is-active") ?
+        burger.classList.remove("is-active") :
+        burger.classList.add("is-active");
     }
   }
 
@@ -114,9 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.addEventListener("click", toggleNav);
 
     function toggleNav() {
-      menu.classList.contains("btn-active")
-        ? menu.classList.remove("btn-active")
-        : menu.classList.add("btn-active");
+      menu.classList.contains("btn-active") ?
+        menu.classList.remove("btn-active") :
+        menu.classList.add("btn-active");
     }
   }
 
@@ -158,44 +156,130 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    320: {
+      centeredSlides: false,
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+    },
+    375: {
+      centeredSlides: false,
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+    },
+    440: {
+      centeredSlides: false,
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+    },
+    560: {
+      centeredSlides: false,
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+    },
+    978: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
 });
 
 
 // Модальное окно
 
 // открыть по кнопке
-$('.js-button-campaign').click(function() {
+$('.js-button-campaign').click(function () {
 
-	$('.js-overlay-campaign').fadeIn();
-	$('.js-overlay-campaign').addClass('disabled');
-	$("body").css("overflow", "hidden");
+  $('.js-overlay-campaign').fadeIn();
+  $('.js-overlay-campaign').addClass('disabled');
+  $("body").css("overflow", "hidden");
 });
 
 // закрыть на крестик
-$('.js-close-campaign').click(function() {
-	$('.js-overlay-campaign').fadeOut();
-		$("body").css("overflow", "visible");
+$('.js-close-campaign').click(function () {
+  $('.js-overlay-campaign').fadeOut();
+  $("body").css("overflow", "visible");
 
 });
 
 // закрыть по клику вне окна
 $(document).mouseup(function (e) {
-	var popup = $('.js-popup-campaign');
-	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
-		$('.js-overlay-campaign').fadeOut();
-			$("body").css("overflow", "visible");
+  var popup = $('.js-popup-campaign');
+  if (e.target != popup[0] && popup.has(e.target).length === 0) {
+    $('.js-overlay-campaign').fadeOut();
+    $("body").css("overflow", "visible");
 
-	}
+  }
 });
 
 // открыть по таймеру
 $(window).on('load', function () {
-	setTimeout(function(){
-		if($('.js-overlay-campaign').hasClass('disabled')) {
-			return false;
-		} else {
+  setTimeout(function () {
+    if ($('.js-overlay-campaign').hasClass('disabled')) {
+      return false;
+    } else {
 
-			$(".js-overlay-campaign").fadeIn();
-		}
-	}, 10000);
+      $(".js-overlay-campaign").fadeIn();
+    }
+  }, 60000);
 });
+
+
+
+let lastScroll = 0;
+const defaultOffset = 200;
+const header = document.querySelector('.header');
+
+const scrollPosition = () => window.pageXOffset || document.documentElement.scrollTop;
+const containHide = () => header.classList.contains('hide');
+
+window.addEventListener('scroll', () => {
+  if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+    header.classList.add('hide');
+  } else if (scrollPosition() < lastScroll && containHide()) {
+    header.classList.remove('hide');
+  }
+
+  lastScroll = scrollPosition();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const burger = document.querySelector('.burger');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('burger--active');
+  });
+
+});
+
+
+
+let tl = gsap.timeline();
+
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+const close = document.querySelector(".close");
+
+
+
+burger.addEventListener("click", () => {
+  menu.classList.add("menu--open");
+  tl.from(".menu", { opacity: 0, duration: 0.3 })
+    .from(".menu__nav", { opacity: 0, y: 30, duration: 0.3 })
+    .from(".social", { opacity: 0, y: 30, duration: 0.3 })
+    .from(".sub-menu", { opacity: 0, y: 30, duration: 0.3 });
+});
+tl.play();
+close.addEventListener("click", () => {
+  menu.classList.remove("menu--open");
+  tl.from(".menu", {
+    opacity: 1,
+    duration: 0.6,
+  });
+});
+tl.play();

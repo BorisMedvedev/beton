@@ -1,5 +1,8 @@
 .prise {
   padding: 82px 0 78px;
+  @include r (440){
+    display: none;
+  }
 
   &__title span {
     color: #f43b00;
@@ -17,6 +20,17 @@
   max-width: 1500px;
   display: flex;
   justify-content: space-between;
+  @include r (1350){
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item{
+    @include r (1350){
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+  }
 
   &__btn {
     width: 260px;
@@ -54,6 +68,15 @@ table {
   padding: 21px;
   overflow: hidden;
   border-radius: 9px;
+  @include r (768){
+    font-size: 16px;
+  }
+  @include r (640){
+    font-size: 14px;
+  }
+  @include r (440){
+    display: none;
+  }
 }
 
 table th {
@@ -61,6 +84,12 @@ table th {
   border: none;
   padding: 21px;
   color: #ffffff;
+  @include r (768){
+    font-size: 16px;
+  }
+  @include r (640){
+    font-size: 14px;
+  }
 }
 table td {
   background: #e4e4e4;
@@ -68,6 +97,12 @@ table td {
   text-align: center;
   padding: 21px;
   color: #313030;
+  @include r (768){
+    font-size: 16px;
+  }
+  @include r (640){
+    font-size: 14px;
+  }
 }
 table tr {
   font-weight: 400;
@@ -79,6 +114,12 @@ table tr {
   text-align: center;
   padding: 21px;
   color: #313030;
+  @include r (768){
+    font-size: 16px;
+  }
+  @include r (640){
+    font-size: 14px;
+  }
 }
 
 thead tr {
@@ -86,10 +127,22 @@ thead tr {
   background-color: #343434;
   max-width: 1500px;
   width: 100%;
+  @include r (768){
+    font-size: 16px;
+  }
+  @include r (640){
+    font-size: 14px;
+  }
 }
 
 .table {
   margin-bottom: 50px;
+  @include r (768){
+    font-size: 16px;
+  }
+  @include r (640){
+    font-size: 14px;
+  }
 }
 
 

@@ -6,6 +6,10 @@
     max-width: 1400px;
     display: flex;
     justify-content: space-around;
+    @include r(1200) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {

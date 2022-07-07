@@ -78,6 +78,9 @@ img {
   font-size: 36px;
   line-height: 44px;
   color: #141414;
+  @include r (460){
+    font-size: 28px;
+  }
 }
 
 .btn {

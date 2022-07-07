@@ -1,12 +1,17 @@
 .form {
   padding: 90px 0;
   position: relative;
+  @include r (1200){
+    padding: 50px 0;
+
+  }
 
   &__inner {
     padding: 20px 0 40px 0;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-image: url("../../images/form-bg.png");
+    background-size: contain;
   }
 
   &__title{
@@ -26,8 +31,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include r (1360){
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  @include r (860){
+    flex-direction: column;
+  }
 
   &__input {
+    margin-bottom: 25px;
     padding: 15px;
     width: 334px;
     height: 52px;
@@ -35,6 +48,9 @@
     background-color: #fbfafa;
     border: 1px solid #cfcfcf;
     border-radius: 12px;
+    @include r (1400){
+      width: 280px;
+    }
 
     &::placeholder {
       font-weight: 300;
@@ -47,5 +63,9 @@
   &__btn {
     max-width: 334px;
     width: 100%;
+    transform: translateY(-6px);
+    @include r (1400){
+      width: 280px;
+    }
   }
 }

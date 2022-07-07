@@ -1,5 +1,8 @@
 .gallery {
   padding-top: 100px;
+  @include r (1200){
+   padding-top: 50px;
+  }
 
 }
 .swiper {
@@ -22,7 +25,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+
 }
 
 .swiper-button-next,
@@ -37,6 +41,9 @@
   background-position: center;
   background-size:cover;
   cursor: pointer;
+  @include r (960){
+    display: none;
+   }
 }
 .swiper-button-next{
   right: 0;
@@ -76,4 +83,32 @@
     background-size: cover;
 
   }
+}
+
+.swiper-pagination{
+  margin-top: 15px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  @include r (960){
+    display: flex;
+   }
+
+}
+
+.swiper-pagination-bullet{
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #d1b4aa;
+  border-radius: 99px;
+  &:not(:last-child){
+    margin-right: 20px;
+  }
+}
+
+.swiper-pagination-bullet-active{
+background-color: #f43b00;
 }
