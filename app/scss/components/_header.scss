@@ -33,12 +33,10 @@
     position: relative;
     display: block;
     padding-left: 20px;
-    @include r (1350){
-      font-size: 18px;
-    }
-    @include r (1200){
+    @include r (1440){
       font-size: 16px;
     }
+
     &::after {
       @include pseudo;
       top: 50%;
@@ -57,12 +55,10 @@
     font-size: 24px;
     font-weight: 500;
     transition: color 0.3s;
-    @include r (1350){
-      font-size: 18px;
-    }
-    @include r (1200){
+    @include r (1440){
       font-size: 16px;
     }
+
     &:hover {
       color: #f43b00;
     }
@@ -100,7 +96,6 @@
 
   &__top-btn{
     @include r (1350){
-      padding: 20px 20px;
       max-width: 180px;
       font-size: 16px;
     }
@@ -120,7 +115,7 @@
     padding-left: 30px;
     transition: color 0.3s;
     @include r (1350){
-      font-size: 18px;
+      font-size: 16px;
     }
     &:hover {
       color: #f43b00;
@@ -142,6 +137,13 @@
   &__top-download{
     @include r (768){
       display: none;
+    }
+  }
+
+  &__top-btn{
+    @include r (1440){
+     padding: 10px 15px;
+     font-size: 16px;
     }
   }
 
@@ -185,6 +187,8 @@
       background-image: url("../images/icons/dogovor.svg");
     }
   }
+
+
 
   &__bottom {
     margin-bottom: 15px;
