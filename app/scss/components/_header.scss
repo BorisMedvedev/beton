@@ -300,6 +300,7 @@
   color: #f43b00;
   cursor: pointer;
   display: none;
+  z-index: 999;
   @include r (768){
     display: block;
   }
@@ -351,5 +352,6 @@
     top: 50%;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   }
+
 
 

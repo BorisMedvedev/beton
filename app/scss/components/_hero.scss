@@ -51,7 +51,7 @@
       font-size: 68px;
     }
     @include r(560) {
-      font-size: 40px;
+      font-size: 46px;
       margin-bottom: 25px;
     }
   }
@@ -73,8 +73,9 @@
     }
     @include r(560) {
       margin-bottom: 40px;
-      font-size: 28px;
+      font-size: 30px;
       line-height: 40px;
+      padding-left: 20px;
     }
     &::after {
       @include pseudo;
@@ -125,10 +126,12 @@
       line-height: 52px;
     }
     @include r(560) {
+      margin-bottom: 50px;
       padding: 5px 15px;
       max-width: 200px;
       font-size: 14px;
-      line-height: 55px;
+      line-height: 48px;
+      background-color: rgba(255, 255, 255, 0.7);
     }
     &:hover {
       background-color: #f43b00;

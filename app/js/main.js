@@ -250,9 +250,27 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu-mobail');
 
   burger.addEventListener('click', () => {
     burger.classList.toggle('burger--active');
+    menu.classList.toggle('menu-mobail-active');
+  });
+
+  const close = document.querySelector('.burger-mob');
+  close.addEventListener('click', () => {
+
+    menu.classList.remove('menu-mobail-active');
+    burger.classList.remove('burger--active');
+  });
+
+  const btns = document.querySelectorAll('.footer__nav-link');
+
+  btns.forEach(el => {
+    el.addEventListener('click', (e) => {
+      menu.classList.remove('menu-mobail-active');
+      burger.classList.remove('burger--active');
+    });
   });
 
 });
