@@ -135,9 +135,7 @@
   }
 
   &__top-download{
-    @include r (768){
-      display: none;
-    }
+
   }
 
   &__top-btn{
@@ -177,12 +175,20 @@
   }
   &__top-download-link--prise {
     margin-bottom: 10px;
+    @include r (768){
+      margin-bottom: 0;
+      margin-right: 45px;
+      padding: 8px 10px 8px 35px;
+    }
     &::after {
       background-image: url("../images/icons/prise.svg");
     }
   }
   &__top-download-link--dogovor {
     margin-bottom: 10px;
+    @include r (768){
+      display: none;
+    }
     &::after {
       background-image: url("../images/icons/dogovor.svg");
     }

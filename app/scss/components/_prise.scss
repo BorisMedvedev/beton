@@ -1,8 +1,6 @@
 .prise {
   padding: 82px 0 78px;
-  @include r (440){
-    display: none;
-  }
+
 
   &__title span {
     color: #f43b00;
@@ -74,9 +72,7 @@ table {
   @include r (640){
     font-size: 14px;
   }
-  @include r (440){
-    display: none;
-  }
+
 }
 
 table th {
@@ -149,11 +145,22 @@ thead tr {
 
 .table-prise {
   margin: 0 auto;
-  max-width: 1500px;
   display: none;
+  overflow-x: scroll;
+}
+.table {
+  max-width: 1500px;
+  @include r (768){
+    width: 768px;
+  }
 }
 
 
 .table-prise.table-prise--active {
   display: block;
 }
+
+.table-prise1 {
+  display: block;
+}
+
