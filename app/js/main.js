@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   function navigation() {
     const anchors = document.querySelectorAll(
-      ".nav__link, .logo, .hero__link"
+      ".nav__link, .logo-footer, .hero__link"
     );
 
     for (let anchor of anchors) {
