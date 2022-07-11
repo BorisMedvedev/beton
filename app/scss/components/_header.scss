@@ -23,11 +23,6 @@
     align-items: center;
   }
 
-  &__top-work{
-    @include r (768){
-      display: none;
-    }
-  }
 
   &__top-work-bell {
     position: relative;
@@ -35,6 +30,9 @@
     padding-left: 20px;
     @include r (1440){
       font-size: 16px;
+    }
+    @include r (768){
+      display: none;
     }
 
     &::after {
@@ -57,6 +55,11 @@
     transition: color 0.3s;
     @include r (1440){
       font-size: 16px;
+      margin-right: 40px;
+    }
+    @include r (768){
+     font-size: 14px;
+     margin-right: 0;
     }
 
     &:hover {
@@ -134,15 +137,20 @@
     }
   }
 
-  &__top-download{
-
-  }
-
   &__top-btn{
     @include r (1440){
      padding: 10px 15px;
      font-size: 16px;
     }
+  }
+
+  &__top-download{
+    @include r (768){
+      order: -1;
+     }
+    @include r (450){
+      display: none;
+     }
   }
 
   &__top-download-link {
@@ -177,11 +185,21 @@
     margin-bottom: 10px;
     @include r (768){
       margin-bottom: 0;
-      margin-right: 45px;
-      padding: 8px 10px 8px 35px;
+      margin-right: 0;
+      padding: 2px 8px;
+      border: 1px solid #f43b00;
+    }
+    @include r (560){
+      margin-bottom: 0;
+      margin-right: 0;
+      padding: 2px 8px;
+      font-size: 14px;
     }
     &::after {
       background-image: url("../images/icons/prise.svg");
+      @include r (768){
+        display: none;
+      }
     }
   }
   &__top-download-link--dogovor {
@@ -292,17 +310,27 @@
 .header.hide{
   transform: translateY(-197px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
+  @include r (768){
+    transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
 .logo{
   @include r (1350){
     max-width: 100px;
   }
 }
+.logo{
+  @include r (560){
+    max-width: 90px;
+    margin-left: -15px;
+  }
+}
 
 
 .burger {
-  width: 30px;
-  height: 20px;
+  width: 35px;
+  height: 25px;
   position: absolute;
   right: 15px;
   top: 50%;
@@ -365,3 +393,34 @@
 
 
 
+
+  .social-list.mobail-list {
+  display: none;
+
+  }
+  .social-list.mobail-list {
+  @include r (768){
+    display: flex;
+
+  }
+}
+
+.social-list__link {
+  @include r (768){
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+
+  }
+}
+
+.header__top-work{
+  @include r (768){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 50px;
+
+  }
+}

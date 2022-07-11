@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   function navigation() {
     const anchors = document.querySelectorAll(
-      ".nav__link, .logo-footer, .hero__link"
+      ".nav__link, .logo-footer, .hero__link, .aside__btn"
     );
 
     for (let anchor of anchors) {
@@ -277,27 +277,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-let tl = gsap.timeline();
-
-const burger = document.querySelector(".burger");
-const menu = document.querySelector(".menu");
-const close = document.querySelector(".close");
 
 
 
-burger.addEventListener("click", () => {
-  menu.classList.add("menu--open");
-  tl.from(".menu", { opacity: 0, duration: 0.3 })
-    .from(".menu__nav", { opacity: 0, y: 30, duration: 0.3 })
-    .from(".social", { opacity: 0, y: 30, duration: 0.3 })
-    .from(".sub-menu", { opacity: 0, y: 30, duration: 0.3 });
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
 });
-tl.play();
-close.addEventListener("click", () => {
-  menu.classList.remove("menu--open");
-  tl.from(".menu", {
-    opacity: 1,
-    duration: 0.6,
-  });
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
 });
-tl.play();

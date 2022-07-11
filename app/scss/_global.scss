@@ -112,6 +112,50 @@ img {
   color: #F43B00;
 }
 
+#button {
+  display: inline-block;
+  background-color: #616160;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99999;
+}
+#button::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-image: url('../images/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+
+}
+#button:hover {
+  cursor: pointer;
+  background-color: rgb(163, 158, 158);
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 input[type="text"], input[type="password"], input[type="date"],
 input[type="datetime"], input[type="number"], input[type="search"],

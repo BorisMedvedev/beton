@@ -333,7 +333,6 @@ input {
   background-color: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   z-index:100;
-  // transform: translateX(200%);
   overflow-y: scroll;
   transform: translateX(200%);
   transition: transform 0.5s;
@@ -348,6 +347,7 @@ input {
 
   &__work {
     display: block;
+    margin-top: 25px;
   }
   .header__top-work-bell{
     font-size: 16px;
