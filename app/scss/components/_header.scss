@@ -8,11 +8,10 @@
   transition: transform 0.3s linear;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 
-
   &__top {
     position: relative;
     padding: 16px 0;
-    @include r (768){
+    @include r(768) {
       padding: 10px 0;
       background-color: #fff;
     }
@@ -23,15 +22,14 @@
     align-items: center;
   }
 
-
   &__top-work-bell {
     position: relative;
     display: block;
     padding-left: 20px;
-    @include r (1440){
+    @include r(1440) {
       font-size: 16px;
     }
-    @include r (768){
+    @include r(768) {
       display: none;
     }
 
@@ -44,6 +42,7 @@
       height: 11px;
       background-color: #2ad100;
       border-radius: 99px;
+      transition: background-color 0.3s;
     }
   }
   &__top-work-phone {
@@ -52,18 +51,26 @@
     padding-left: 40px;
     font-size: 24px;
     font-weight: 500;
-    transition: color 0.3s;
-    @include r (1440){
+    transition: color 0.3s, border 0.3s;
+    border-bottom: 2px solid transparent;
+    @include r(1440) {
       font-size: 16px;
       margin-right: 40px;
     }
-    @include r (768){
-     font-size: 14px;
-     margin-right: 0;
+    @include r(768) {
+      font-size: 14px;
+      margin-right: 0;
     }
 
+    &:focus {
+      color: #f43b00;
+    }
     &:hover {
       color: #f43b00;
+      border-color: #f43b00;
+    }
+    &:active {
+      color: #7a2204;
     }
     &::after {
       @include pseudo;
@@ -95,20 +102,18 @@
     }
   }
 
-
-
-  &__top-btn{
-    @include r (1350){
+  &__top-btn {
+    @include r(1350) {
       max-width: 180px;
       font-size: 16px;
     }
-    @include r (768){
+    @include r(768) {
       display: none;
     }
   }
 
-  &__top-email{
-    @include r (1024){
+  &__top-email {
+    @include r(1024) {
       display: none;
     }
   }
@@ -116,12 +121,20 @@
     position: relative;
     display: block;
     padding-left: 30px;
-    transition: color 0.3s;
-    @include r (1350){
+    transition: color 0.3s, border 0.3s;
+    border-bottom: 2px solid transparent;
+    @include r(1350) {
       font-size: 16px;
+    }
+    &:focus {
+      color: #f43b00;
     }
     &:hover {
       color: #f43b00;
+      border-color: #f43b00;
+    }
+    &:active {
+      color: #7a2204;
     }
 
     &::after {
@@ -137,20 +150,20 @@
     }
   }
 
-  &__top-btn{
-    @include r (1440){
-     padding: 10px 15px;
-     font-size: 16px;
+  &__top-btn {
+    @include r(1440) {
+      padding: 10px 15px;
+      font-size: 16px;
     }
   }
 
-  &__top-download{
-    @include r (768){
+  &__top-download {
+    @include r(768) {
       order: -1;
-     }
-    @include r (450){
+    }
+    @include r(450) {
       display: none;
-     }
+    }
   }
 
   &__top-download-link {
@@ -183,36 +196,46 @@
   }
   &__top-download-link--prise {
     margin-bottom: 10px;
-    @include r (768){
-      margin-bottom: 0;
+    @include r(768) {
+      margin-bottom: 10px;
       margin-right: 0;
       padding: 2px 8px;
       border: 1px solid #f43b00;
     }
-    @include r (560){
-      margin-bottom: 0;
+    @include r(560) {
+      margin-bottom: 10px;
       margin-right: 0;
       padding: 2px 8px;
       font-size: 14px;
     }
     &::after {
       background-image: url("../images/icons/prise.svg");
-      @include r (768){
+      @include r(768) {
         display: none;
       }
     }
   }
   &__top-download-link--dogovor {
     margin-bottom: 10px;
-    @include r (768){
-      display: none;
+    @include r(768) {
+      margin-bottom: 0;
+      margin-right: 0;
+      padding: 2px 8px;
+      border: 1px solid #f43b00;
+    }
+    @include r(560) {
+      margin-bottom: 0;
+      margin-right: 0;
+      padding: 2px 8px;
+      font-size: 14px;
     }
     &::after {
       background-image: url("../images/icons/dogovor.svg");
+      @include r(768) {
+      display: none;
+      }
     }
   }
-
-
 
   &__bottom {
     margin-bottom: 15px;
@@ -222,7 +245,7 @@
     line-height: 27px;
     color: #ffffff;
     background-color: #343434;
-    @include r (768){
+    @include r(768) {
       display: none;
     }
   }
@@ -240,18 +263,18 @@
     }
   }
 
-  &__link{
+  &__link {
     position: relative;
     height: 100%;
     transition: color 0.3s;
-    @include r (1024){
-      font-size: 16px;
+    @include r(1024) {
+      font-size: 20px;
     }
-    &::after{
+    &::after {
       position: absolute;
       bottom: -14px;
       display: block;
-      content: '';
+      content: "";
       width: 100%;
       height: 3px;
       background-color: #f43b00;
@@ -259,18 +282,18 @@
       transition: opacity 0.3s;
     }
 
-    &:hover::after{
+    &:hover::after {
       opacity: 1;
     }
-    &:active{
+    &:active {
       color: #f43b00;
-     }
+    }
   }
 }
 
 .social-list {
   display: flex;
-  @include r (1200){
+  @include r(1200) {
     display: none;
   }
   &__item {
@@ -307,26 +330,25 @@
   }
 }
 
-.header.hide{
+.header.hide {
   transform: translateY(-197px);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
-  @include r (768){
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  @include r(768) {
     transform: translateY(0);
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
-.logo{
-  @include r (1350){
+.logo {
+  @include r(1350) {
     max-width: 100px;
   }
 }
-.logo{
-  @include r (560){
+.logo {
+  @include r(560) {
     max-width: 90px;
     margin-left: -15px;
   }
 }
-
 
 .burger {
   width: 35px;
@@ -339,7 +361,7 @@
   cursor: pointer;
   display: none;
   z-index: 999;
-  @include r (768){
+  @include r(768) {
     display: block;
   }
 }
@@ -375,52 +397,46 @@
 }
 
 .burger--active .burger__line {
-    transform: scale(0);
-    transition: transform 0.3s ease-in-out;
-  }
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
 
 .burger--active::before {
-    transform: rotate(45deg);
-    top: 50%;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  }
+  transform: rotate(45deg);
+  top: 50%;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
 
 .burger--active::after {
-    transform: rotate(-45deg);
-    top: 50%;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  }
+  transform: rotate(-45deg);
+  top: 50%;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
 
-
-
-
-  .social-list.mobail-list {
+.social-list.mobail-list {
   display: none;
-
-  }
-  .social-list.mobail-list {
-  @include r (768){
+}
+.social-list.mobail-list {
+  @include r(768) {
     display: flex;
-
   }
 }
 
 .social-list__link {
-  @include r (768){
+  @include r(768) {
     width: 25px;
     height: 25px;
     background-size: cover;
-
   }
 }
 
-.header__top-work{
-  @include r (768){
+.header__top-work {
+  @include r(768) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     margin-right: 50px;
-
   }
 }
+
