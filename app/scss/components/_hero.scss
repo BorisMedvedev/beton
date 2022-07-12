@@ -104,8 +104,8 @@
     }
     @include r(560) {
       padding: 5px 15px;
-      max-width: 200px;
-      font-size: 14px;
+      max-width: 250px;
+      font-size: 16px;
       line-height: 55px;
     }
   }
@@ -118,18 +118,19 @@
     border-radius: 9px;
     color: #f43b00;
     line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
     transition: background-color 0.3s, color 0.3s;
     @include r(1200) {
       padding: 10px 15px;
       max-width: 250px;
-      font-size: 16px;
-      line-height: 52px;
+      font-size: 18px;
+      line-height: 38px;
     }
     @include r(560) {
       margin-bottom: 50px;
       padding: 5px 15px;
-      max-width: 200px;
-      font-size: 14px;
+      max-width: 250px;
+      font-size: 18px;
       line-height: 48px;
       background-color: rgba(255, 255, 255, 0.7);
     }
@@ -193,5 +194,5 @@
   }
 }
 .aside__btn:hover::after{
-  background-color: rgba(34, 60, 80, 0.5);
+  background-color: rgba(34, 60, 80, 0.3);
 }
