@@ -15,7 +15,7 @@
   }
 
   &__title{
-    margin: 0;
+    margin: 15px;
   }
 
   &__descr {
@@ -39,6 +39,12 @@
     flex-direction: column;
   }
 
+  &__label{
+    @include r (440){
+      width: 100%;
+    }
+  }
+
   &__input {
     margin-bottom: 25px;
     padding: 15px;
@@ -47,9 +53,12 @@
     outline: none;
     background-color: #fbfafa;
     border: 1px solid #cfcfcf;
-    border-radius: 12px;
+    border-radius: 9px;
     @include r (1400){
       width: 280px;
+    }
+    @include r (440){
+      width: 100%;
     }
 
     &::placeholder {
@@ -61,11 +70,14 @@
   }
 
   &__btn {
-    max-width: 334px;
-    width: 100%;
-    transform: translateY(-6px);
+    width: 334px;
+
+    transform: translateY(-13px);
     @include r (1400){
       width: 280px;
+    }
+    @include r (440){
+      width: 100%;
     }
   }
 }

@@ -1,5 +1,8 @@
 .prise {
   padding: 82px 0 78px;
+  @include r (440){
+    padding: 50px 0 50px;
+  }
 
 
   &__title span {
@@ -28,6 +31,9 @@
       margin-right: 10px;
       margin-bottom: 15px;
     }
+    @include r (440){
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -42,6 +48,10 @@
     font-size: 18px;
     outline: 0;
     transition: color 0.3s, box-shadow 0.3s, border 0.3s;
+    @include r (440){
+      width: 100%;
+      margin-bottom: 10px;
+    }
     &:focus{
       background-color: #e4e4e4;
       color: #F43B00;
@@ -78,9 +88,7 @@ table {
   @include r (768){
     font-size: 16px;
   }
-  @include r (640){
-    font-size: 14px;
-  }
+
 
 }
 
@@ -92,9 +100,7 @@ table th {
   @include r (768){
     font-size: 16px;
   }
-  @include r (640){
-    font-size: 14px;
-  }
+
 }
 table td {
   background: #e4e4e4;
@@ -105,9 +111,7 @@ table td {
   @include r (768){
     font-size: 16px;
   }
-  @include r (640){
-    font-size: 14px;
-  }
+
 }
 table tr {
   font-weight: 400;
@@ -122,9 +126,7 @@ table tr {
   @include r (768){
     font-size: 16px;
   }
-  @include r (640){
-    font-size: 14px;
-  }
+
 }
 
 thead tr {
@@ -135,9 +137,7 @@ thead tr {
   @include r (768){
     font-size: 16px;
   }
-  @include r (640){
-    font-size: 14px;
-  }
+
 }
 
 .table {
@@ -145,9 +145,7 @@ thead tr {
   @include r (768){
     font-size: 16px;
   }
-  @include r (640){
-    font-size: 14px;
-  }
+
 }
 
 
@@ -162,7 +160,7 @@ thead tr {
 .table {
   max-width: 1500px;
   @include r (768){
-    width: 768px;
+    width: 900px;
   }
 }
 
