@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   function navigation() {
     const anchors = document.querySelectorAll(
-      ".nav__link, .logo-footer, .hero__link, .aside__btn"
+      ".nav__link, .logo-footer, .hero__link, .aside__btn, .tabs-block__btn"
     );
 
     for (let anchor of anchors) {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tabsBtn.forEach(function (el) {
       el.addEventListener("click", function (e) {
         const path = e.currentTarget.dataset.path;
-
+        navigation();
         tabsBtn.forEach(function (btn) {
           btn.classList.remove("tabs-block__btn--active");
           e.currentTarget.classList.add("tabs-block__btn--active");
@@ -63,35 +63,36 @@ document.addEventListener("DOMContentLoaded", function () {
               .classList.add("table-prise--active");
           });
         });
+
       });
     });
   }
 
-  // function contactsForm() {
-  //   var Selector = document.querySelector("input[type='tel']");
-  //   var im = new Inputmask("+7 (999)-999-99-99");
-  //   im.mask(Selector);
-  //   new JustValidate(".contacts-form", {
-  //     rules: {
-  //       name: {
-  //         required: true,
-  //         minLength: 2,
-  //         maxLength: 10,
-  //       },
-  //       phone: {
-  //         required: true,
-  //         function: (name, value) => {
-  //           const phone = Selector.Inputmask.unmaskevalue();
-  //           return Number(phone) && phone.length === 10;
-  //         },
-  //       },
-  //       mail: {
-  //         required: true,
-  //         email: true,
-  //       },
-  //     },
-  //   });
-  // }
+  function contactsForm() {
+    var Selector = document.querySelectorAll("input[type='tel']");
+    var im = new Inputmask("+7 (999)-999-99-99");
+    im.mask(Selector);
+    new JustValidate(".contacts-form", {
+      rules: {
+        name: {
+          required: true,
+          minLength: 2,
+          maxLength: 10,
+        },
+        phone: {
+          required: true,
+          function: (name, value) => {
+            const phone = Selector.Inputmask.unmaskevalue();
+            return Number(phone) && phone.length === 10;
+          },
+        },
+        mail: {
+          required: true,
+          email: true,
+        },
+      },
+    });
+  }
 
   function burgerBtn() {
     const burger = document.querySelector(".burger");

@@ -252,7 +252,7 @@ address {
     border: 1px solid transparent;
     transition: border-color 0.3s;
     @include r(560) {
-      height: 40px;
+      height: 47px;
     }
 
     &::placeholder {
