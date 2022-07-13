@@ -285,10 +285,10 @@ address {
 .radio-castom {
   position: relative;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
-  margin-right: 15px;
+  margin-right: 10px;
   transform: translateY(3px);
 
   &::before {
@@ -298,8 +298,8 @@ address {
     transform: translate(-50%, -50%);
     display: block;
     content: "";
-    width: 10px;
-    height: 9px;
+    width: 15px;
+    height:15px;
     background-image: url("../images/icons/checkbox.svg");
     background-repeat: no-repeat;
     background-position: center;
