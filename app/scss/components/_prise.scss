@@ -70,9 +70,10 @@
     }
   }
 }
-.tabs-block__btn--active{
+.tabs-block__btn.tabs-block__btn--active{
   border: 1px solid #F43B00;
-  color: #F43B00;
+  color: #ffffff;
+  background-color: #8f8e8e;
 
 }
 table {
