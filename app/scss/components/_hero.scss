@@ -72,7 +72,7 @@
       line-height: 50px;
     }
     @include r(560) {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       font-size: 30px;
       line-height: 40px;
       padding-left: 20px;
@@ -104,9 +104,9 @@
     }
     @include r(560) {
       padding: 5px 15px;
-      max-width: 250px;
-      font-size: 16px;
-      line-height: 55px;
+      max-width: 300px;
+      font-size: 18px;
+      line-height: 52px;
     }
   }
 
@@ -129,7 +129,7 @@
     @include r(560) {
       margin-bottom: 50px;
       padding: 5px 15px;
-      max-width: 250px;
+      max-width: 300px;
       font-size: 18px;
       line-height: 48px;
       background-color: rgba(255, 255, 255, 0.7);

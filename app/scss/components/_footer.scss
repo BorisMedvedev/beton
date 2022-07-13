@@ -110,12 +110,11 @@
     margin-top: 20px;
   }
 
-  .logo__img{
+  .logo__img {
     margin-bottom: 15px;
-
   }
 
-  .social-list__link{
+  .social-list__link {
     width: 35px;
     height: 35px;
   }
@@ -338,12 +337,12 @@ input {
   display: inline-block;
   background-color: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  z-index:100;
+  z-index: 100;
   overflow-y: scroll;
   transform: translateX(200%);
   transition: transform 0.5s;
 
-  &__logo{
+  &__logo {
     display: block;
     max-width: 150px;
     margin-bottom: 25px;
@@ -357,22 +356,24 @@ input {
     display: block;
     margin-top: 25px;
   }
-  .header__top-work-bell{
-    font-size: 16px;
+  .header__top-work-bell {
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: block;
   }
-  .header__top-work-phone{
+  .header__top-work-phone {
     padding-left: 20px;
     margin-bottom: 25px;
     font-size: 18px;
   }
-  .header__top-work-phone::after{
+  .header__top-work-phone::after {
     left: 0;
   }
-  .footer__nav-item{
+  .footer__nav-item {
     margin-bottom: 10px;
   }
 
-  .nav__link{
+  .nav__link {
     font-size: 18px;
   }
   .footer__right-btn {
@@ -381,33 +382,32 @@ input {
     height: 40px;
   }
 
-  .header__top-download-link{
-
-    padding: 8px 10px 8px 30px;
+  .header__top-download-link {
+    font-size: 18px;
+    padding: 15px 29px 15px 45px;
   }
-  .header__top-download-link::after{
+  .header__top-download-link::after {
     display: block;
     left: 8px;
   }
 
   .footer__right-btn {
-    padding: 10px 30px;
-    font-size: 16px;
-    height: 50px;
+    padding: 10px 50px;
+    font-size: 18px;
+    height: 64px;
+  }
 }
-}
-.menu-mobail.menu-mobail-active{
+.menu-mobail.menu-mobail-active {
   transform: translateX(0);
 }
 
-.burger-mob{
+.burger-mob {
   position: absolute;
   top: 40px;
   right: 15px;
 }
 
-
-.copirait{
+.copirait {
   display: block;
   margin-top: 20px;
   font-size: 14px;
