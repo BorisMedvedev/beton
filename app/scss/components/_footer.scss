@@ -239,7 +239,7 @@ address {
       font-weight: 400;
       font-size: 14px;
       line-height: 17px;
-      color: #ffffff;
+      color: #fff;
       cursor: pointer;
     }
   }
@@ -434,4 +434,14 @@ input {
     margin-right: 20px;
   }
 
+}
+
+.politica {
+  
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+  &:hover{
+    color:#f43b00;
+  }
 }
