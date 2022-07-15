@@ -20,30 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  function contactsMap() {
-    ymaps.ready(init);
-
-    function init() {
-      var myMap = new ymaps.Map("contacts__map", {
-        center: [55.75846806898367, 37.60108849999989],
-        zoom: 16,
-      });
-
-      var myPlacemark = new ymaps.Placemark(
-        [55.75846806898367, 37.60108849999989], {}, {
-          iconLayout: "default#image",
-          iconImageHref: "../images/icons/group.svg",
-          iconImageSize: [20, 20],
-          iconImageOffset: [-3, -42],
-        }
-      );
-      myMap.geoObjects.add(myPlacemark);
-      myMap.behaviors.disable("scrollZoom");
-    }
-  }
-
-
-
   function tabsContent() {
     let tabsBtn = document.querySelectorAll(".tabs-block__btn");
     let tabsItem = document.querySelectorAll(".table-prise");
@@ -134,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  contactsMap();
   navigation();
   tabsContent();
   contactsForm();
@@ -275,10 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-
-
-
-
 
 
 var btn = $('#button');

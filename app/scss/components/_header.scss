@@ -67,7 +67,7 @@
     }
     &:hover {
       color: #f43b00;
-      border-color: #f43b00;
+
     }
     &:active {
       color: #7a2204;
@@ -131,7 +131,7 @@
     }
     &:hover {
       color: #f43b00;
-      border-color: #f43b00;
+      
     }
     &:active {
       color: #7a2204;
@@ -308,6 +308,9 @@
     background-repeat: no-repeat;
     background-position: center;
     transition: filter 0.3s;
+    &:focus {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.7));
+    }
     &:hover {
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
     }
@@ -345,7 +348,7 @@
 }
 .logo {
   @include r(560) {
-    max-width: 90px;
+    max-width: 100px;
     margin-left: -15px;
   }
 }
@@ -424,8 +427,8 @@
 
 .social-list__link {
   @include r(768) {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-size: cover;
   }
 }
@@ -436,7 +439,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    margin-right: 50px;
+    margin-right: 70px;
   }
 }
 
