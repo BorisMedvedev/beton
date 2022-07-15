@@ -14,6 +14,7 @@
   <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
   <link rel="shortcut icon" href="images/favicon/favicon.ico" />
   <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.svg" type=" image/svg+xml">
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="msapplication-config" content="images/favicon/browserconfig.xml" />
   <meta name="theme-color" content="#ffffff" />
@@ -21,34 +22,12 @@
   <meta name="keywords" content="бетон, бетон в москве, бетон не дорого, лучший бетон, раствор, цпс керамзитобетон, тощий бетон, растворы, доставка бетона" />
   <meta name="description" content="Бетон в Москве не дорого быстрая доставка" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-
-
-
-
   <script src="//code.jivo.ru/widget/uvmuzUejk4" async></script>
   <script src="js/cookie.min.js" defer></script>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=76d10f3a-6594-4483-8620-1091358b4d14&lang=ru_RU"></script>
-  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Yandex.Metrika counter -->
-<script >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-  ym(89463004, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/89463004" style="position:absolute; left:-9999px;" alt="y" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<meta name="yandex-verification" content="4fd44ade524d0494" />
 </head>
 
 
@@ -127,6 +106,12 @@
         <nav class="nav" title="главное меню">
           <ul class="list-reset nav__list">
             <li class="nav__item">
+              <a href="/index.html" class="nav__link link-ul">page1</a>
+            </li>
+            <li class="nav__item">
+              <a href="/contacts.html" class="nav__link link-ul">page2</a>
+            </li>
+            <li class="nav__item">
               <a href="#advantage" class="nav__link link-ul">Преимущества</a>
             </li>
             <li class="nav__item">
@@ -145,8 +130,76 @@
   </div>
 </header>
 
-    <main class="main">
-     
+    <main id="swup" class="transition-fade">
+      <section class="hero">
+  <h1 class="sr-only">Бетон с доставкой по Москве и Московской области. 3 завода. 20 лет опыт работы.</h1>
+
+  <div class="hero__wrapper">
+    <aside class="aside">
+      <ul class="aside__list list-reset">
+        <li class="aside__item">
+          <a href="#prise1" class="aside__btn  btn-reset">Бетонные смеси</a>
+        </li>
+        <li class="aside__item">
+          <a href="#prise1" class="aside__btn  btn-reset">Керамзитобетон</a>
+        </li>
+        <li class="aside__item">
+          <a href="#prise1" class="aside__btn  btn-reset">тощий бетон</a>
+        </li>
+        <li class="aside__item">
+          <a href="#prise1" class="aside__btn  btn-reset">ЦПС</a>
+        </li>
+        <li class="aside__item">
+          <a href="#prise1" class="aside__btn  btn-reset">растворы</a>
+        </li>
+        <li class="aside__item">
+          <a href="#prise3" class="aside__btn  btn-reset">Стоимость доставки</a>
+        </li>
+        <li class="aside__item">
+          <a href="#prise2" class="aside__btn  btn-reset">
+            Стоиомсть противоморозной добавки (ПМД)
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="hero__content">
+      <p class="hero__title">Три завода</p>
+      <p class="hero__subtitle">по производству бетона</p>
+
+      <a class="hero__link btn" href="#prise">Узнать цену</a>
+      <a class="hero__link hero__link--transporent btn" href="#map">Посмотреть на карте</a>
+    </div>
+  </div>
+</section>
+
+      <section id="map" class="map">
+  <h3 class="title map__title">Зона <span class="span-color">покрытия</span> нашей компании</h3>
+
+  <div class="map__inner">
+      <div class="container map__container">
+      <div class="map__left">
+        <img class="map__left-img" src="images/mixer.png" alt="бетоновоз" width="684" />
+        <div class="map__form">
+          <h4 class="map__form-title"><span class="span-color">Закажите</span> бетон</h4>
+          <p class="map__form-text">
+            мы рассчитаем нужный обьем бетона, нужной марки за короткое время
+          </p>
+          <form  action="mail.php" method="POST" class="form-map">
+            <label  class="form-map__label">
+              <input name="phone" class="form-map__input" type="tel" placeholder="Ваш телефон" required/>
+            </label>
+            <button class="form-map__btn btn btn-reset">Заказать</button>
+          </form>
+        </div>
+      </div>
+      <div class="map__right">
+        <img class="map__right-img" src="images/map.png" alt="" width="864"/>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
     <footer id="footer" class="footer">
   <div class="container">
@@ -316,8 +369,6 @@
   <script src="js/inputmask.min.js"></script>
   <script src="js/just-validate.js"></script>
 
-  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script src="js/main.min.js "></script>
 </body>
 

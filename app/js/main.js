@@ -269,3 +269,4 @@ btn.on('click', function(e) {
 
 
 
+const swup = new Swup();
