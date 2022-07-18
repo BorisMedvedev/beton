@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var btn = $('#button');
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
     btn.addClass('show');
   } else {
@@ -262,9 +262,11 @@ $(window).scroll(function() {
   }
 });
 
-btn.on('click', function(e) {
+btn.on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $('html, body').animate({
+    scrollTop: 0
+  }, '300');
 });
 
 
