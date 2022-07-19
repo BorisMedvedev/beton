@@ -70,52 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function burgerBtn() {
-    const burger = document.querySelector(".burger");
 
-    burger.addEventListener("click", toggleNav);
-
-    function toggleNav() {
-      burger.classList.contains("is-active") ?
-        burger.classList.remove("is-active") :
-        burger.classList.add("is-active");
-    }
-  }
-
-  function burgerBtn1() {
-    const burger = document.querySelector(".burger");
-    const menu = document.querySelector(".nav");
-
-    burger.addEventListener("click", toggleNav);
-
-    function toggleNav() {
-      menu.classList.contains("btn-active") ?
-        menu.classList.remove("btn-active") :
-        menu.classList.add("btn-active");
-    }
-  }
-
-  function modalPopup() {
-    const openBtn = document.querySelector(".exit-btn");
-    const modal = document.querySelector(".modal-popup");
-    const closeBtn = document.querySelector(".close-btn");
-    openBtn.addEventListener("click", () => {
-      modal.showModal();
-    });
-    closeBtn.addEventListener("click", () => {
-      modal.close();
-    });
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) modal.close();
-    });
-  }
 
   navigation();
   tabsContent();
   contactsForm();
-  burgerBtn();
-  modalPopup();
-  burgerBtn1();
+
 });
 
 
@@ -201,7 +161,7 @@ $(window).on('load', function () {
 
       $(".js-overlay-campaign").fadeIn();
     }
-  }, 60000);
+  }, 80000);
 });
 
 
@@ -272,3 +232,26 @@ btn.on('click', function (e) {
 
 
 const swup = new Swup();
+
+
+const cookieEl = document.querySelector('.cookie-block');
+const okEl = document.querySelector('.ok');
+
+okEl.addEventListener('click', () => {
+  cookieEl.style.display = 'none';
+});
+
+let cookies = () => {
+  if (!Cookies.get('hide-cookie')) {
+    setTimeout(() => {
+      cookieEl.style.display = 'block';
+    }, 5000);
+  }
+
+  Cookies.set('hide-cookie', 'true', {
+    expires: 10
+  });
+}
+
+
+cookies();
