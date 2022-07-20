@@ -161,8 +161,8 @@ address {
   border-radius: 30px;
   box-shadow: 0px 4px 10px rgb(0 0 0 / 50%);
   @include r(560) {
-    max-width: 90%;
-    padding: 25px 20px 20px;
+    width: 85%;
+    padding: 20px;
   }
   &__title {
     margin-bottom: 20px;
