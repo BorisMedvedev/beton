@@ -73,11 +73,17 @@
     @include r(560) {
       font-size: 18px;
     }
+    &:focus {
+      color: #a12a02;
+    }
     &:hover {
       color: #f43b00;
     }
+    &:active {
+      color: #f5693a;
+    }
     &::after {
-      bottom: -5px;
+      display: none;
     }
   }
 
@@ -145,18 +151,17 @@ address {
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 550px;
-  width: 100%;
   text-align: center;
   background-image: url("../images/popup-bg.png");
+  background-color: #141414;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 999;
-  border-radius: 50px;
-  border: 1px solid #ffffff;
-  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 50%);
   @include r(560) {
-    max-width: 95%;
+    max-width: 90%;
     padding: 25px 20px 20px;
   }
   &__title {
@@ -430,19 +435,17 @@ input {
   border-radius: 9px;
   display: none;
 
-  & p{
+  & p {
     margin: 0;
     margin-right: 20px;
   }
-
 }
 
 .politica {
-
   color: #fff;
   font-size: 18px;
   transition: color 0.3s;
-  &:hover{
-    color:#f43b00;
+  &:hover {
+    color: #f43b00;
   }
 }
