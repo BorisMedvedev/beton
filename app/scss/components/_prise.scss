@@ -147,7 +147,7 @@ thead tr {
 .table {
   max-width: 1500px;
   @include r(768) {
-    width: 900px;
+    width: 700px;
   }
 }
 
@@ -162,5 +162,18 @@ thead tr {
 .table.table-mobail {
   @include r(768) {
     width: 100%;
+  }
+}
+
+table tr th {
+  @include r(768) {
+    width: 50px;
+    font-size: 14px;
+  }
+}
+table tr {
+  @include r(768) {
+    width: 50px;
+    font-size: 14px;
   }
 }

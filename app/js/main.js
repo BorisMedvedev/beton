@@ -231,9 +231,6 @@ btn.on('click', function (e) {
 
 
 
-const swup = new Swup();
-
-
 const cookieEl = document.querySelector('.cookie-block');
 const okEl = document.querySelector('.ok');
 
