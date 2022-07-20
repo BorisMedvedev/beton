@@ -88,27 +88,33 @@ img {
   padding: 20px 40px;
   height: 64px;
   background-color: #f43b00;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   font-weight: 600;
   font-size: 20px;
   line-height: 20px;
+  border: 2px solid transparent;
   color: #ffffff;
   outline: 0;
-  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s, color 0.3s;
   &:focus {
     background-color: #f54c14;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    outline: #fff;
+    color: #000;
   }
   &:hover {
-    background-color: #f54c14;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    border-color: #f54c14;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    color: rgb(128, 127, 127);
   }
   &:active {
     background-color: #b1afae;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    box-shadow: 0px -1px 21px 2px rgba(34, 60, 80, 0.5) inset;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #000;
+    box-shadow: 0 -1px 21px 2px rgba(49, 59, 66, 0.7) inset;
+    border-color: transparent;
   }
 }
 
