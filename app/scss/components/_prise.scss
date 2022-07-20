@@ -1,16 +1,15 @@
 .prise {
   padding: 82px 0 78px;
-  @include r (440){
+  @include r(440) {
     padding: 50px 0 50px;
   }
-
 
   &__title span {
     color: #f43b00;
   }
 }
 
-.prise__table{
+.prise__table {
   margin: 0 auto;
   max-width: 1500px;
 }
@@ -21,17 +20,17 @@
   max-width: 1500px;
   display: flex;
   justify-content: space-between;
-  @include r (1350){
+  @include r(1350) {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  &__item{
-    @include r (1350){
+  &__item {
+    @include r(1350) {
       margin-right: 10px;
       margin-bottom: 15px;
     }
-    @include r (440){
+    @include r(440) {
       width: 100%;
     }
   }
@@ -48,33 +47,29 @@
     font-size: 18px;
     outline: 0;
     transition: color 0.3s, box-shadow 0.3s, border 0.3s;
-    @include r (440){
+    @include r(440) {
       width: 100%;
       margin-bottom: 10px;
     }
-    &:focus{
+    &:focus {
       background-color: #e4e4e4;
-      color: #F43B00;
-
+      color: #f43b00;
     }
-    &:hover{
+    &:hover {
       background-color: #e4e4e4;
-      color: #F43B00;
-
+      color: #f43b00;
     }
-    &:active{
+    &:active {
       background-color: #e4e4e4;
       color: #a82c03;
       box-shadow: 0px -1px 21px 2px rgba(34, 60, 80, 0.3) inset;
-
     }
   }
 }
-.tabs-block__btn.tabs-block__btn--active{
-  border: 2px solid #F43B00;
+.tabs-block__btn.tabs-block__btn--active {
+  border: 2px solid #f43b00;
   color: #fff;
   background-color: #5f5f5f;
-
 }
 table {
   text-align: center;
@@ -86,11 +81,9 @@ table {
   padding: 21px;
   overflow: hidden;
   border-radius: 9px;
-  @include r (768){
+  @include r(768) {
     font-size: 16px;
   }
-
-
 }
 
 table th {
@@ -98,10 +91,9 @@ table th {
   border: none;
   padding: 21px;
   color: #ffffff;
-  @include r (768){
+  @include r(768) {
     font-size: 16px;
   }
-
 }
 table td {
   background: #e4e4e4;
@@ -109,10 +101,9 @@ table td {
   text-align: center;
   padding: 21px;
   color: #313030;
-  @include r (768){
+  @include r(768) {
     font-size: 16px;
   }
-
 }
 table tr {
   font-weight: 400;
@@ -124,10 +115,9 @@ table tr {
   text-align: center;
   padding: 21px;
   color: #313030;
-  @include r (768){
+  @include r(768) {
     font-size: 16px;
   }
-
 }
 
 thead tr {
@@ -135,36 +125,31 @@ thead tr {
   background-color: #343434;
   max-width: 1500px;
   width: 100%;
-  @include r (768){
+  @include r(768) {
     font-size: 16px;
   }
-
 }
 
 .table {
   margin-bottom: 50px;
-  @include r (768){
+  @include r(768) {
     font-size: 16px;
   }
-
 }
-
-
 
 .table-prise {
   margin: 0 auto;
   display: none;
-  @include r (768){
+  @include r(768) {
     overflow-x: scroll;
   }
 }
 .table {
   max-width: 1500px;
-  @include r (768){
+  @include r(768) {
     width: 900px;
   }
 }
-
 
 .table-prise.table-prise--active {
   display: block;
@@ -174,3 +159,8 @@ thead tr {
   display: block;
 }
 
+.table.table-mobail {
+  @include r(768) {
+    width: 100%;
+  }
+}
