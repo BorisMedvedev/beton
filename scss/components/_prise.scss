@@ -1,0 +1,201 @@
+.prise {
+  padding: 82px 0 78px;
+  @include r(440) {
+    padding: 50px 0 50px;
+  }
+
+  &__title span {
+    color: #f43b00;
+  }
+}
+
+.prise__table {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.tabs-block {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  @include r(1350) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    @include r(1350) {
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+    @include r(440) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    text-align: center;
+    width: 260px;
+    background-color: #e4e4e4;
+    border-radius: 9px;
+    color: #141414;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    font-size: 18px;
+    outline: 0;
+    transition: color 0.3s, box-shadow 0.3s, border 0.3s;
+    @include r(440) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &:focus {
+      background-color: #e4e4e4;
+      color: #f43b00;
+    }
+    &:hover {
+      background-color: #e4e4e4;
+      color: #f43b00;
+      border-color: #f43b00;
+    }
+    &:active {
+      background-color: #e4e4e4;
+      color: #a82c03;
+      box-shadow: 0px -1px 21px 2px rgba(7, 10, 12, 0.4) inset;
+      border-color: transparent;
+    }
+  }
+}
+.tabs-block__btn.tabs-block__btn--active {
+  border: 1px solid #f43b00;
+  color: #fff;
+  background-color: #616161;
+  box-shadow: 0px 0px 11px 4px rgba(244, 59, 0, 0.4);
+}
+table {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  padding: 21px;
+  overflow: hidden;
+  border-radius: 9px;
+  @include r(768) {
+    font-size: 16px;
+  }
+}
+
+table th {
+  text-align: center;
+  border: none;
+  padding: 21px;
+  color: #ffffff;
+  @include r(768) {
+    font-size: 16px;
+  }
+}
+table td {
+  background: #e4e4e4;
+  border: none;
+  text-align: center;
+  padding: 21px;
+  color: #313030;
+  @include r(768) {
+    font-size: 16px;
+  }
+}
+table tr {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #141414;
+  background: #e4e4e4;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 21px;
+  color: #313030;
+  @include r(768) {
+    font-size: 16px;
+  }
+}
+
+thead tr {
+  text-align: center;
+  background-color: #343434;
+  max-width: 1500px;
+  width: 100%;
+  @include r(768) {
+    font-size: 16px;
+  }
+}
+
+.table {
+  margin-bottom: 50px;
+  @include r(768) {
+    font-size: 16px;
+  }
+}
+
+.table-prise {
+  margin: 0 auto;
+  display: none;
+  @include r(768) {
+    overflow-x: scroll;
+  }
+}
+.table {
+  max-width: 1500px;
+  box-shadow: 0 0 11px 4px rgba(0, 0, 0, 0.3);
+  @include r(768) {
+    max-width: 700px;
+  }
+  @include r(560) {
+    max-width: 400px;
+  }
+  @include r(440) {
+    max-width: 375px;
+  }
+}
+
+.table-prise.table-prise--active {
+  display: block;
+}
+
+.table-prise1 {
+  display: block;
+}
+
+.table.table-mobail {
+  @include r(768) {
+    width: 98%;
+  }
+}
+
+table tr th {
+  @include r(768) {
+    font-size: 14px;
+  }
+  @include r(440) {
+    padding: 5px;
+  }
+}
+table tr td {
+  @include r(768) {
+    font-size: 14px;
+  }
+  @include r(440) {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+thead tr th {
+  @include r(440) {
+    padding: 5px;
+    font-size: 12px;
+  }
+}

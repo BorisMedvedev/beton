@@ -1,0 +1,445 @@
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: transform 0.3s linear;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+
+  &__top {
+    position: relative;
+    padding: 16px 0;
+    @include r(768) {
+      padding: 10px 0;
+      background-color: #fff;
+    }
+  }
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__top-work-bell {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    @include r(1440) {
+      font-size: 16px;
+    }
+    @include r(768) {
+      display: none;
+    }
+
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 11px;
+      height: 11px;
+      background-color: #2ad100;
+      border-radius: 99px;
+      transition: background-color 0.3s;
+    }
+  }
+  &__top-work-phone {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    font-size: 24px;
+    font-weight: 500;
+    transition: color 0.3s, border 0.3s;
+    border-bottom: 2px solid transparent;
+    @include r(1440) {
+      font-size: 16px;
+      margin-right: 40px;
+    }
+    @include r(768) {
+      font-size: 14px;
+      margin-right: 0;
+    }
+
+    &:focus {
+      color: #f43b00;
+    }
+    &:hover {
+      color: #f43b00;
+
+    }
+    &:active {
+      color: #7a2204;
+    }
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      width: 18px;
+      height: 18px;
+      background-image: url("../images/icons/phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__top-email-day {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/icons/clock.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__top-btn {
+    @include r(1350) {
+      max-width: 180px;
+      font-size: 16px;
+    }
+    @include r(768) {
+      display: none;
+    }
+  }
+
+  &__top-email {
+    @include r(1024) {
+      display: none;
+    }
+  }
+  &__top-email-link {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    transition: color 0.3s, border 0.3s;
+    border-bottom: 2px solid transparent;
+    @include r(1350) {
+      font-size: 16px;
+    }
+    &:focus {
+      color: #f43b00;
+    }
+    &:hover {
+      color: #f43b00;
+      
+    }
+    &:active {
+      color: #7a2204;
+    }
+
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 20px;
+      height: 16px;
+      background-image: url("../images/icons/email.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__top-btn {
+    @include r(1440) {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  }
+
+  &__top-download {
+    @include r(768) {
+      order: -1;
+    }
+    @include r(450) {
+      display: none;
+    }
+  }
+
+  &__top-download-link {
+    position: relative;
+    display: block;
+    padding: 8px 25px 8px 45px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 9px;
+    font-size: 16px;
+    transition: color 0.3s, box-shadow 0.3s;
+    &:hover {
+      color: #f43b00;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    &:active {
+      color: #f43b00;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    &::after {
+      @include pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 14px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__top-download-link--prise {
+    margin-bottom: 10px;
+    @include r(768) {
+      margin-bottom: 10px;
+      margin-right: 0;
+      padding: 2px 8px;
+      border: 1px solid #f43b00;
+    }
+    @include r(560) {
+      margin-bottom: 10px;
+      margin-right: 0;
+      padding: 2px 8px;
+      font-size: 14px;
+    }
+    &::after {
+      background-image: url("../images/icons/prise.svg");
+      @include r(768) {
+        display: none;
+      }
+    }
+  }
+  &__top-download-link--dogovor {
+    margin-bottom: 10px;
+    @include r(768) {
+      margin-bottom: 0;
+      margin-right: 0;
+      padding: 2px 8px;
+      border: 1px solid #f43b00;
+    }
+    @include r(560) {
+      margin-bottom: 0;
+      margin-right: 0;
+      padding: 2px 8px;
+      font-size: 14px;
+    }
+    &::after {
+      background-image: url("../images/icons/dogovor.svg");
+      @include r(768) {
+      display: none;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-bottom: 15px;
+    padding: 10px 0 13px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #ffffff;
+    background-color: #343434;
+    @include r(768) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    height: 100%;
+    transition: color 0.3s;
+    @include r(1024) {
+      font-size: 20px;
+    }
+    &::after {
+      position: absolute;
+      bottom: -14px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: #f43b00;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+    &:active {
+      color: #f43b00;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  @include r(1200) {
+    display: none;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: filter 0.3s;
+    &:focus {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.7));
+    }
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    }
+    &:active {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  &__link--viber {
+    background-image: url("../images/icons/viber.svg");
+  }
+  &__link--telegram {
+    background-image: url("../images/icons/telegram.svg");
+  }
+  &__link--viber {
+    background-image: url("../images/icons/viber.svg");
+  }
+  &__link--whatsapp {
+    background-image: url("../images/icons/whatsapp.svg");
+  }
+}
+
+.header.hide {
+  transform: translateY(-197px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  @include r(768) {
+    transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+.logo {
+  @include r(1350) {
+    max-width: 100px;
+  }
+}
+.logo {
+  @include r(560) {
+    max-width: 100px;
+    margin-left: -15px;
+  }
+}
+
+.burger {
+  width: 35px;
+  height: 25px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f43b00;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  @include r(768) {
+    display: block;
+  }
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - 2px);
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+  transform: rotate(45deg);
+  top: 50%;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  transform: rotate(-45deg);
+  top: 50%;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.social-list.mobail-list {
+  display: none;
+}
+.social-list.mobail-list {
+  @include r(768) {
+    display: flex;
+  }
+}
+
+.social-list__link {
+  @include r(768) {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+  }
+}
+
+.header__top-work {
+  @include r(768) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 70px;
+  }
+}
+
